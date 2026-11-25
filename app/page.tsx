@@ -37,7 +37,7 @@ export default function HomeClient() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activePlanTab, setActivePlanTab] = useState<"floor" | "master" | "terrace">("floor");
   const [galleryFilter, setGalleryFilter] = useState<"all" | "exterior" | "interior" | "amenities">("all");
-  
+
   // Modals
   const [brochureModalOpen, setBrochureModalOpen] = useState(false);
   const [priceBreakupModalOpen, setPriceBreakupModalOpen] = useState(false);
@@ -63,7 +63,7 @@ export default function HomeClient() {
       id: 1,
       category: "exterior",
       title: "Signature Laterite Stone Façade",
-      desc: "Architectural elevation with organic red laterite stone and acoustic bronze louvers",
+      desc: "Distinct architectural elevation with organic red laterite stone and acoustic bronze louvers",
       img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop",
     },
     {
@@ -109,40 +109,40 @@ export default function HomeClient() {
       : galleryItems.filter((item) => item.category === galleryFilter);
 
   return (
-    <div className="min-h-screen bg-[#0d0f12] text-[#f5f3ee] font-sans antialiased selection:bg-[#c5a880] selection:text-black">
+    <div className="min-h-screen bg-white text-[#262638] font-sans antialiased selection:bg-[#262638] selection:text-white">
       {/* ======================================================== */}
-      {/* 1. TOP HEADER & PARTNER CO-BRANDING BAR */}
+      {/* 1. TOP SUBTLE NOTICE BAR */}
       {/* ======================================================== */}
-      <div className="bg-[#08090b] border-b border-white/5 py-2 px-4 text-xs text-[#a0a3ab]">
+      <div className="bg-[#f8f6f2] border-b border-[#eae7e1] py-2 px-4 text-xs text-[#5e6074]">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-2">
           <div className="flex items-center gap-3">
-            <span className="flex items-center gap-1.5 text-[#c5a880] font-semibold tracking-wider uppercase text-[11px]">
-              <span className="w-2 h-2 rounded-full bg-[#c5a880] animate-pulse"></span>
-              Verified Exclusive Listing
+            <span className="flex items-center gap-1.5 text-[#262638] font-semibold tracking-wider uppercase text-[11px]">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#c58b5c]"></span>
+              Exclusive Boutique Residences
             </span>
-            <span className="hidden md:inline text-white/20">|</span>
-            <span className="hidden md:flex items-center gap-1 text-white/70">
-              <MapPin className="w-3.5 h-3.5 text-[#c5a880]" />
+            <span className="hidden md:inline text-[#d4cfc7]">|</span>
+            <span className="hidden md:flex items-center gap-1 text-[#5e6074]">
+              <MapPin className="w-3.5 h-3.5 text-[#c58b5c]" />
               D Block, 3rd Cross Street, Anna Nagar East, Chennai – 600102
             </span>
           </div>
 
           <div className="flex items-center gap-5">
             <a
-              href="tel:+919840012345"
-              className="flex items-center gap-1.5 hover:text-[#c5a880] transition-colors"
+              href="tel:+914442244444"
+              className="flex items-center gap-1.5 hover:text-[#c58b5c] transition-colors"
             >
-              <Phone className="w-3.5 h-3.5 text-[#c5a880]" />
-              <span className="font-medium text-white">+91 98400 12345</span>
+              <Phone className="w-3.5 h-3.5 text-[#c58b5c]" />
+              <span className="font-medium text-[#262638]">+91 44 4224 4444</span>
             </a>
-            <span className="text-white/20">|</span>
+            <span className="text-[#d4cfc7]">|</span>
             <a
-              href="https://wa.me/919840012345"
+              href="https://wa.me/917601000444"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1 text-[#25D366] hover:underline"
+              className="flex items-center gap-1 text-[#262638] hover:text-[#c58b5c] transition-colors"
             >
-              <MessageSquare className="w-3.5 h-3.5" />
+              <MessageSquare className="w-3.5 h-3.5 text-[#25D366]" />
               <span>WhatsApp Inquiries</span>
             </a>
           </div>
@@ -150,65 +150,63 @@ export default function HomeClient() {
       </div>
 
       {/* ======================================================== */}
-      {/* 2. PRIMARY NAVBAR (GOED PROPERTIES LAYOUT x ARIHANT THEME) */}
+      {/* 2. PRIMARY NAVIGATION (MATCHING LIVE ARIHANT SPACES) */}
       {/* ======================================================== */}
-      <header className="sticky top-0 z-50 bg-[#0d0f12]/95 backdrop-blur-md border-b border-white/10 shadow-lg shadow-black/40">
+      <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-[#eae7e1] transition-all">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-          {/* Logo / Brand Pairing */}
-          <div className="flex items-center gap-5">
+          {/* Exact Arihant Brandmark from Screenshot 2 & 4 */}
+          <div className="flex items-center gap-4">
             <a href="#" className="flex flex-col">
-              <div className="flex items-center gap-2">
-                <span className="text-[11px] uppercase tracking-[0.3em] text-[#c5a880] font-semibold">
-                  ARIHANT SPACES
+              <div className="flex items-baseline gap-1">
+                <span className="font-bold text-2xl tracking-tight text-[#262638]">
+                  Arihant
                 </span>
-                <span className="text-[10px] px-1.5 py-0.5 border border-[#c5a880]/30 text-[#c5a880] bg-[#c5a880]/10 uppercase font-mono">
-                  MIRA
-                </span>
+                <span className="text-xs text-[#262638]">®</span>
               </div>
-              <span className="text-xl sm:text-2xl font-serif-luxury tracking-wider text-white font-semibold">
-                BOUTIQUE RESIDENCES
-              </span>
-              <span className="text-[9px] uppercase tracking-[0.2em] text-[#a0a3ab]">
-                ANNA NAGAR EAST • MARKETING BY GOED PROPERTIES
+              <span className="text-[10px] lowercase tracking-wider text-[#5e6074] -mt-1 font-light">
+                memorable spaces
               </span>
             </a>
+            <span className="h-6 w-[1px] bg-[#eae7e1] mx-1 hidden sm:block"></span>
+            <span className="text-xs tracking-[0.2em] font-serif-luxury uppercase text-[#c58b5c] hidden sm:block font-medium">
+              Mira Anna Nagar
+            </span>
           </div>
 
-          {/* Nav Items as structured on Goed Properties */}
-          <nav className="hidden lg:flex items-center gap-7 text-xs uppercase tracking-[0.16em] font-medium text-white/80">
-            <a href="#overview" className="hover:text-[#c5a880] transition-colors">
-              Overview
+          {/* Nav Links Matching Screenshot 1: LIFESTYLE, NEIGHBOURHOOD, DESIGN, FAQ, PLANS */}
+          <nav className="hidden lg:flex items-center gap-8 text-xs uppercase tracking-[0.2em] font-medium text-[#262638]">
+            <a href="#lifestyle" className="hover:text-[#c58b5c] transition-colors">
+              Lifestyle
             </a>
-            <a href="#pricing" className="hover:text-[#c5a880] transition-colors">
-              Configuration & Price
+            <a href="#neighbourhood" className="hover:text-[#c58b5c] transition-colors">
+              Neighbourhood
             </a>
-            <a href="#floorplans" className="hover:text-[#c5a880] transition-colors">
-              Floor Plans
+            <a href="#whymira" className="hover:text-[#c58b5c] transition-colors">
+              Why Mira
             </a>
-            <a href="#amenities" className="hover:text-[#c5a880] transition-colors">
-              Amenities
+            <a href="#pricing" className="hover:text-[#c58b5c] transition-colors">
+              Price & Specs
             </a>
-            <a href="#gallery" className="hover:text-[#c5a880] transition-colors">
+            <a href="#plans" className="hover:text-[#c58b5c] transition-colors">
+              Plans
+            </a>
+            <a href="#gallery" className="hover:text-[#c58b5c] transition-colors">
               Gallery
-            </a>
-            <a href="#location" className="hover:text-[#c5a880] transition-colors">
-              Location
             </a>
           </nav>
 
-          {/* Quick Action Button */}
+          {/* Exact Rounded Pill Button: "ENQUIRE" (Screenshot 1) */}
           <div className="flex items-center gap-3">
-            <button
-              onClick={() => setBrochureModalOpen(true)}
-              className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 text-xs uppercase tracking-[0.15em] font-semibold text-[#0d0f12] bg-[#c5a880] hover:bg-[#dfc299] transition-all duration-300 shadow-md shadow-[#c5a880]/20"
+            <a
+              href="#contact"
+              className="px-8 py-2.5 rounded-full bg-[#262638] hover:bg-[#191925] text-white text-xs uppercase tracking-[0.2em] font-semibold transition-all shadow-sm hover:shadow-md"
             >
-              <Download className="w-3.5 h-3.5" />
-              <span>Brochure</span>
-            </button>
+              Enquire
+            </a>
 
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 text-white/80 hover:text-white"
+              className="lg:hidden p-2 text-[#262638] hover:text-black"
               aria-label="Toggle Navigation"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -218,245 +216,201 @@ export default function HomeClient() {
 
         {/* Mobile Nav Drawer */}
         {mobileMenuOpen && (
-          <div className="lg:hidden bg-[#14171d] border-b border-white/10 px-6 py-5 space-y-3 text-xs uppercase tracking-widest text-white/80">
+          <div className="lg:hidden bg-[#f8f6f2] border-b border-[#eae7e1] px-6 py-5 space-y-3 text-xs uppercase tracking-widest text-[#262638]">
             <a
-              href="#overview"
+              href="#lifestyle"
               onClick={() => setMobileMenuOpen(false)}
-              className="block hover:text-[#c5a880] py-1.5"
+              className="block hover:text-[#c58b5c] py-1"
             >
-              Overview
+              Lifestyle
+            </a>
+            <a
+              href="#neighbourhood"
+              onClick={() => setMobileMenuOpen(false)}
+              className="block hover:text-[#c58b5c] py-1"
+            >
+              Neighbourhood
+            </a>
+            <a
+              href="#whymira"
+              onClick={() => setMobileMenuOpen(false)}
+              className="block hover:text-[#c58b5c] py-1"
+            >
+              Why Mira
             </a>
             <a
               href="#pricing"
               onClick={() => setMobileMenuOpen(false)}
-              className="block hover:text-[#c5a880] py-1.5"
+              className="block hover:text-[#c58b5c] py-1"
             >
-              Configuration & Price
+              Price & Specs
             </a>
             <a
-              href="#floorplans"
+              href="#plans"
               onClick={() => setMobileMenuOpen(false)}
-              className="block hover:text-[#c5a880] py-1.5"
+              className="block hover:text-[#c58b5c] py-1"
             >
-              Floor Plans
-            </a>
-            <a
-              href="#amenities"
-              onClick={() => setMobileMenuOpen(false)}
-              className="block hover:text-[#c5a880] py-1.5"
-            >
-              Amenities
+              Plans
             </a>
             <a
               href="#gallery"
               onClick={() => setMobileMenuOpen(false)}
-              className="block hover:text-[#c5a880] py-1.5"
+              className="block hover:text-[#c58b5c] py-1"
             >
               Gallery
             </a>
-            <a
-              href="#location"
-              onClick={() => setMobileMenuOpen(false)}
-              className="block hover:text-[#c5a880] py-1.5"
-            >
-              Location
-            </a>
-            <div className="pt-2 border-t border-white/10 flex gap-2">
-              <button
-                onClick={() => {
-                  setMobileMenuOpen(false);
-                  setSiteVisitModalOpen(true);
-                }}
-                className="w-full py-2.5 bg-[#c5a880] text-[#0d0f12] font-semibold uppercase text-center"
+            <div className="pt-2">
+              <a
+                href="#contact"
+                onClick={() => setMobileMenuOpen(false)}
+                className="block w-full py-2.5 rounded-full bg-[#262638] text-white text-center font-semibold uppercase tracking-widest"
               >
-                Schedule Site Visit
-              </button>
+                Enquire Now
+              </a>
             </div>
           </div>
         )}
       </header>
 
       {/* ======================================================== */}
-      {/* 3. HERO & BREADCRUMBS WITH TWO-COLUMN LISTING HERO */}
+      {/* 3. HERO SECTION (MATCHING SCREENSHOT 4: "A WHISPER OF ELEGANCE") */}
       {/* ======================================================== */}
-      <section className="relative border-b border-white/10 bg-[#0d0f12] pt-6 pb-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Breadcrumb Path as on Goed Properties */}
-          <div className="flex items-center gap-2 text-xs text-[#a0a3ab] mb-6">
-            <a href="#" className="hover:text-white transition-colors flex items-center gap-1">
-              <Home className="w-3.5 h-3.5 text-[#c5a880]" />
+      <section className="relative bg-amber-silk overflow-hidden border-b border-[#eae7e1] py-16 lg:py-24">
+        {/* Decorative Fluid Texture Backdrop */}
+        <div className="absolute inset-0 opacity-40 mix-blend-overlay bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-white via-transparent to-[#c58b5c]"></div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          {/* Breadcrumb Path from Goed Properties */}
+          <div className="flex items-center gap-2 text-xs text-[#262638]/70 mb-8 font-medium">
+            <a href="#" className="hover:text-[#262638] flex items-center gap-1">
+              <Home className="w-3.5 h-3.5" />
               <span>Home</span>
             </a>
-            <ChevronRight className="w-3 h-3 text-white/30" />
-            <span className="hover:text-white">Chennai</span>
-            <ChevronRight className="w-3 h-3 text-white/30" />
-            <span className="hover:text-white">Anna Nagar East</span>
-            <ChevronRight className="w-3 h-3 text-white/30" />
-            <span className="text-[#c5a880] font-medium">Arihant Spaces (Mira)</span>
+            <ChevronRight className="w-3 h-3 opacity-50" />
+            <span>Chennai</span>
+            <ChevronRight className="w-3 h-3 opacity-50" />
+            <span>Anna Nagar East</span>
+            <ChevronRight className="w-3 h-3 opacity-50" />
+            <span className="text-[#262638] font-bold">Arihant Spaces (Mira)</span>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-            {/* Left Column: Project Showcase, Banner, & Summary Badges */}
-            <div className="lg:col-span-8 space-y-6">
-              {/* Project Header Title Area */}
-              <div>
-                <div className="flex flex-wrap items-center gap-2 mb-3">
-                  <span className="px-3 py-1 bg-[#8c3a27] text-white text-[11px] font-semibold uppercase tracking-wider">
-                    Under Construction
-                  </span>
-                  <span className="px-3 py-1 bg-[#c5a880]/15 border border-[#c5a880]/40 text-[#dfc299] text-[11px] font-semibold uppercase tracking-wider">
-                    Only 5 Exclusive Residences
-                  </span>
-                  <span className="px-3 py-1 bg-white/5 border border-white/10 text-white/80 text-[11px] font-medium uppercase tracking-wider">
-                    RERA Approved
-                  </span>
-                </div>
-
-                <h1 className="font-serif-luxury text-3xl sm:text-5xl font-normal text-white tracking-tight leading-tight">
-                  Arihant Spaces (Mira)
-                </h1>
-
-                <p className="text-sm sm:text-base text-[#cfcbbe] mt-2 flex items-center gap-2">
-                  <MapPin className="w-4 h-4 text-[#c5a880] shrink-0" />
-                  <span>D Block, 3rd Cross Street, Anna Nagar East, Chennai – 600102</span>
-                </p>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            {/* Left Column: Exactly Matching Hero in Screenshot 4 */}
+            <div className="lg:col-span-7 space-y-6">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/60 backdrop-blur-sm border border-white/80 text-xs font-medium text-[#262638] tracking-wider uppercase">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#c58b5c]"></span>
+                Under Construction • Exclusive 5 Residences
               </div>
 
-              {/* Main Feature Visual Banner */}
-              <div className="relative aspect-[16/9] overflow-hidden border border-white/15 bg-[#14171d] shadow-2xl">
-                <img
-                  src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1600&auto=format&fit=crop"
-                  alt="Arihant Spaces Anna Nagar Exterior Elevation"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0d0f12] via-transparent to-transparent opacity-80"></div>
-                
-                {/* Floating Architectural Badge */}
-                <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 p-4 bg-[#0d0f12]/90 border border-[#c5a880]/30 backdrop-blur-md">
-                  <div>
-                    <span className="text-[10px] uppercase tracking-widest text-[#c5a880] font-semibold block">
-                      Architectural Masterpiece
-                    </span>
-                    <span className="text-sm sm:text-base font-serif-luxury text-white">
-                      Red Laterite Stone Façade • 1 Residence Per Floor
-                    </span>
-                  </div>
-                  <button
-                    onClick={() => setSiteVisitModalOpen(true)}
-                    className="px-4 py-2 bg-[#c5a880] text-[#0d0f12] text-xs uppercase tracking-wider font-semibold hover:bg-[#dfc299] transition-all"
-                  >
-                    Schedule Visit
-                  </button>
-                </div>
+              {/* Exact Tagline from Screenshot 4 */}
+              <h1 className="font-serif-luxury text-4xl sm:text-6xl lg:text-7xl font-normal text-white drop-shadow-sm leading-[1.1] tracking-tight">
+                A whisper of <br />
+                <span className="italic">elegance</span>
+              </h1>
+
+              {/* Exact Project Header Label from Screenshot 4 */}
+              <div className="flex items-center gap-4 pt-2">
+                <span className="font-serif-luxury text-2xl sm:text-3xl text-white font-semibold">
+                  Mira
+                </span>
+                <span className="h-6 w-[1.5px] bg-white/70"></span>
+                <span className="text-xs sm:text-sm font-medium tracking-[0.2em] uppercase text-white/90">
+                  D BLOCK, ANNA NAGAR EAST
+                </span>
               </div>
 
-              {/* Key Features Metric Grid (Goed Properties Specification Bar) */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                <div className="p-4 bg-[#14171d] border border-white/10 text-center">
-                  <span className="text-[11px] uppercase tracking-wider text-[#a0a3ab] block mb-1">
-                    Property Type
-                  </span>
-                  <span className="font-serif-luxury text-base sm:text-lg text-[#c5a880] font-semibold block">
-                    4 BHK Boutique
-                  </span>
-                  <span className="text-[10px] text-white/50">Palatial Homes</span>
-                </div>
+              <p className="text-sm sm:text-base text-white/90 font-light max-w-xl leading-relaxed">
+                An ultra-luxury boutique sanctuary featuring sprawling 4 BHK homes of 3,308 sq. ft.
+                One residence per floor (Stilt + 5 levels) with zero shared walls and an enduring red
+                laterite stone façade.
+              </p>
 
-                <div className="p-4 bg-[#14171d] border border-white/10 text-center">
-                  <span className="text-[11px] uppercase tracking-wider text-[#a0a3ab] block mb-1">
-                    Super Built-up
-                  </span>
-                  <span className="font-serif-luxury text-base sm:text-lg text-[#c5a880] font-semibold block">
-                    3,308 Sq. Ft.
-                  </span>
-                  <span className="text-[10px] text-white/50">Per Residence</span>
+              {/* Specifications Strip (Goed Properties details in Arihant refined styling) */}
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-4">
+                <div className="p-3.5 rounded-xl bg-white/70 backdrop-blur-md border border-white/80 text-center">
+                  <span className="text-[10px] uppercase tracking-wider text-[#5e6074] block">Type</span>
+                  <span className="font-serif-luxury text-base font-semibold text-[#262638]">4 BHK</span>
+                  <span className="text-[10px] text-[#5e6074] block">Palatial</span>
                 </div>
-
-                <div className="p-4 bg-[#14171d] border border-white/10 text-center">
-                  <span className="text-[11px] uppercase tracking-wider text-[#a0a3ab] block mb-1">
-                    Building Density
-                  </span>
-                  <span className="font-serif-luxury text-base sm:text-lg text-[#c5a880] font-semibold block">
-                    Stilt + 5 Floors
-                  </span>
-                  <span className="text-[10px] text-white/50">1 Home Per Floor</span>
+                <div className="p-3.5 rounded-xl bg-white/70 backdrop-blur-md border border-white/80 text-center">
+                  <span className="text-[10px] uppercase tracking-wider text-[#5e6074] block">Area</span>
+                  <span className="font-serif-luxury text-base font-semibold text-[#262638]">3,308</span>
+                  <span className="text-[10px] text-[#5e6074] block">Sq. Ft.</span>
                 </div>
-
-                <div className="p-4 bg-[#14171d] border border-white/10 text-center">
-                  <span className="text-[11px] uppercase tracking-wider text-[#a0a3ab] block mb-1">
-                    Starting Price
-                  </span>
-                  <span className="font-serif-luxury text-base sm:text-lg text-[#c5a880] font-semibold block">
-                    ₹8.5 Cr*
-                  </span>
-                  <span className="text-[10px] text-white/50">Onwards</span>
+                <div className="p-3.5 rounded-xl bg-white/70 backdrop-blur-md border border-white/80 text-center">
+                  <span className="text-[10px] uppercase tracking-wider text-[#5e6074] block">Density</span>
+                  <span className="font-serif-luxury text-base font-semibold text-[#262638]">1 / Floor</span>
+                  <span className="text-[10px] text-[#5e6074] block">Zero Shared Walls</span>
+                </div>
+                <div className="p-3.5 rounded-xl bg-white/70 backdrop-blur-md border border-white/80 text-center">
+                  <span className="text-[10px] uppercase tracking-wider text-[#5e6074] block">Price</span>
+                  <span className="font-serif-luxury text-base font-semibold text-[#262638]">₹8.5 Cr*</span>
+                  <span className="text-[10px] text-[#5e6074] block">Onwards</span>
                 </div>
               </div>
             </div>
 
-            {/* Right Column: Sticky Instant Callback & Enquiry Box (Exact Goed Properties Format) */}
-            <div className="lg:col-span-4 sticky top-28 space-y-6">
-              <div className="bg-[#14171d] border border-[#c5a880]/40 p-6 sm:p-7 shadow-2xl relative overflow-hidden">
-                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#dfc299] via-[#c5a880] to-[#8c3a27]"></div>
-
+            {/* Right Column: Goed Properties Sticky Callback & Lead Form */}
+            <div className="lg:col-span-5">
+              <div className="bg-white rounded-2xl border border-[#eae7e1] p-6 sm:p-8 shadow-xl relative">
                 <div className="mb-5">
-                  <span className="text-[10px] uppercase tracking-[0.2em] text-[#c5a880] font-semibold block mb-1">
-                    Authorized Channel Partner
+                  <span className="text-[10px] uppercase tracking-[0.2em] text-[#c58b5c] font-semibold block mb-1">
+                    Marketing by Goed Properties
                   </span>
-                  <h3 className="font-serif-luxury text-xl text-white">
-                    Request Price & Site Visit
+                  <h3 className="font-serif-luxury text-xl text-[#262638] font-semibold">
+                    Request Price Sheet & Site Visit
                   </h3>
-                  <p className="text-xs text-[#a0a3ab] mt-1 font-light">
-                    Direct developer pricing, layout sheets, and private VIP previews.
+                  <p className="text-xs text-[#5e6074] mt-1 font-light">
+                    Direct official pricing, floor layouts, and private preview access.
                   </p>
                 </div>
 
                 {submittedInquiry ? (
-                  <div className="p-5 bg-white/5 border border-[#c5a880]/30 text-center space-y-3">
-                    <CheckCircle2 className="w-10 h-10 text-[#c5a880] mx-auto animate-pulse" />
-                    <h4 className="font-serif-luxury text-lg text-white">Inquiry Received</h4>
-                    <p className="text-xs text-[#a0a3ab]">
-                      Thank you! Our property specialist from Goed Properties & Arihant Spaces will contact you shortly.
+                  <div className="p-6 bg-[#f8f6f2] rounded-xl border border-[#eae7e1] text-center space-y-3">
+                    <CheckCircle2 className="w-10 h-10 text-[#262638] mx-auto animate-pulse" />
+                    <h4 className="font-serif-luxury text-lg text-[#262638]">Inquiry Received</h4>
+                    <p className="text-xs text-[#5e6074]">
+                      Thank you! Our property advisory team from Goed Properties & Arihant Spaces will contact you shortly.
                     </p>
                     <button
                       onClick={() => setSubmittedInquiry(false)}
-                      className="text-xs text-[#c5a880] underline uppercase tracking-wider pt-2"
+                      className="text-xs text-[#262638] underline uppercase tracking-wider pt-2 font-semibold"
                     >
                       Send Another Request
                     </button>
                   </div>
                 ) : (
-                  <form onSubmit={handleInquirySubmit} className="space-y-4 text-xs">
+                  <form onSubmit={handleInquirySubmit} className="space-y-3 text-xs">
                     <div>
-                      <label className="block text-white/80 uppercase tracking-wider mb-1 font-medium">
+                      <label className="block text-[#262638] uppercase tracking-wider mb-1 font-medium text-[11px]">
                         Your Name *
                       </label>
                       <input
                         type="text"
                         required
-                        placeholder="e.g. Anand Kumar"
+                        placeholder="e.g. Ramesh Sundaram"
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className="w-full px-3.5 py-2.5 bg-[#090b0e] border border-white/10 text-white placeholder-white/30 focus:outline-none focus:border-[#c5a880]"
+                        className="w-full px-3.5 py-2.5 rounded-lg bg-[#f8f6f2] border border-[#eae7e1] text-[#262638] placeholder-[#a0a3ab] focus:outline-none focus:border-[#262638]"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-white/80 uppercase tracking-wider mb-1 font-medium">
+                      <label className="block text-[#262638] uppercase tracking-wider mb-1 font-medium text-[11px]">
                         Mobile Number *
                       </label>
                       <input
                         type="tel"
                         required
-                        placeholder="+91 Phone Number"
+                        placeholder="+91 Mobile Number"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        className="w-full px-3.5 py-2.5 bg-[#090b0e] border border-white/10 text-white placeholder-white/30 focus:outline-none focus:border-[#c5a880]"
+                        className="w-full px-3.5 py-2.5 rounded-lg bg-[#f8f6f2] border border-[#eae7e1] text-[#262638] placeholder-[#a0a3ab] focus:outline-none focus:border-[#262638]"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-white/80 uppercase tracking-wider mb-1 font-medium">
+                      <label className="block text-[#262638] uppercase tracking-wider mb-1 font-medium text-[11px]">
                         Email Address *
                       </label>
                       <input
@@ -465,194 +419,169 @@ export default function HomeClient() {
                         placeholder="name@email.com"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className="w-full px-3.5 py-2.5 bg-[#090b0e] border border-white/10 text-white placeholder-white/30 focus:outline-none focus:border-[#c5a880]"
+                        className="w-full px-3.5 py-2.5 rounded-lg bg-[#f8f6f2] border border-[#eae7e1] text-[#262638] placeholder-[#a0a3ab] focus:outline-none focus:border-[#262638]"
                       />
-                    </div>
-
-                    <div>
-                      <label className="block text-white/80 uppercase tracking-wider mb-1 font-medium">
-                        Message / Query
-                      </label>
-                      <textarea
-                        rows={2}
-                        value={formData.message}
-                        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                        className="w-full px-3.5 py-2.5 bg-[#090b0e] border border-white/10 text-white placeholder-white/30 focus:outline-none focus:border-[#c5a880]"
-                      ></textarea>
                     </div>
 
                     <button
                       type="submit"
-                      className="w-full py-3.5 bg-[#c5a880] hover:bg-[#dfc299] text-[#0d0f12] font-semibold uppercase tracking-widest text-xs transition-all shadow-md shadow-[#c5a880]/20"
+                      className="w-full py-3.5 rounded-full bg-[#262638] hover:bg-[#191925] text-white font-semibold uppercase tracking-widest text-xs transition-all shadow-md mt-2"
                     >
                       Instant Call Back & Price Sheet
                     </button>
                   </form>
                 )}
 
-                <div className="mt-5 pt-4 border-t border-white/10 text-center">
-                  <span className="text-[11px] text-[#a0a3ab] block">Or speak directly with our team:</span>
+                <div className="mt-4 pt-3 border-t border-[#eae7e1] flex items-center justify-between text-xs">
+                  <span className="text-[#5e6074]">Direct hotline:</span>
                   <a
-                    href="tel:+919840012345"
-                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#c5a880] mt-1 hover:underline"
+                    href="tel:+914442244444"
+                    className="font-semibold text-[#262638] hover:text-[#c58b5c]"
                   >
-                    <Phone className="w-3.5 h-3.5" />
-                    +91 98400 12345
+                    +91 44 4224 4444
                   </a>
                 </div>
               </div>
-
-              {/* Quick Downloads Card */}
-              <div className="bg-[#14171d] border border-white/10 p-5 space-y-3">
-                <span className="text-[11px] uppercase tracking-wider text-[#c5a880] font-semibold block">
-                  Project Assets
-                </span>
-                <button
-                  onClick={() => setBrochureModalOpen(true)}
-                  className="w-full flex items-center justify-between p-3 bg-white/5 hover:bg-white/10 border border-white/10 text-xs transition-colors"
-                >
-                  <span className="flex items-center gap-2">
-                    <FileText className="w-4 h-4 text-[#c5a880]" />
-                    Project Master Brochure
-                  </span>
-                  <Download className="w-3.5 h-3.5 text-white/60" />
-                </button>
-
-                <button
-                  onClick={() => setPriceBreakupModalOpen(true)}
-                  className="w-full flex items-center justify-between p-3 bg-white/5 hover:bg-white/10 border border-white/10 text-xs transition-colors"
-                >
-                  <span className="flex items-center gap-2">
-                    <Download className="w-4 h-4 text-[#c5a880]" />
-                    Detailed Cost Sheet & Payment Plan
-                  </span>
-                  <ChevronRight className="w-3.5 h-3.5 text-white/60" />
-                </button>
-              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* ======================================================== */}
-      {/* 4. OVERVIEW & PROJECT SUMMARY SECTION */}
+      {/* 4. "WHY MIRA?" SECTION (EXACTLY FROM SCREENSHOT 3) */}
       {/* ======================================================== */}
-      <section id="overview" className="py-20 border-b border-white/10 bg-[#0f1116]">
+      <section id="whymira" className="py-20 bg-amber-silk-soft border-b border-[#eae7e1] relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          {/* Centered Heading Matching Screenshot 3 */}
+          <h2 className="font-serif-luxury text-3xl sm:text-5xl font-normal text-[#262638] mb-12">
+            Why Mira?
+          </h2>
+
+          {/* 3 Column Feature Highlights from Screenshot 3 with Divider Line */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-8 border-t border-[#262638]/20 text-left">
+            <div className="space-y-2">
+              <p className="text-sm sm:text-base text-[#262638]/90 font-light leading-relaxed">
+                Each residence occupies an entire floor, ensuring no shared walls and a level of
+                privacy that is rarely achieved.
+              </p>
+            </div>
+
+            <div className="space-y-2">
+              <p className="text-sm sm:text-base text-[#262638]/90 font-light leading-relaxed">
+                3308 sq.ft. homes designed with clear separation between living, private, and service
+                areas, allowing the home to function seamlessly through the day.
+              </p>
+            </div>
+
+            <div className="space-y-2">
+              <p className="text-sm sm:text-base text-[#262638]/90 font-light leading-relaxed">
+                A focus on proportion, material quality, and restraint creates spaces that feel
+                timeless, balanced, and built for long-term living.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-12">
+            <a
+              href="#gallery"
+              className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-[#262638] hover:bg-[#1a1a26] text-white text-xs uppercase tracking-[0.2em] font-semibold transition-all shadow-sm"
+            >
+              View Gallery
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* ======================================================== */}
+      {/* 5. "THE MIRA LIFESTYLE" & OVERVIEW (MATCHING SCREENSHOT 1) */}
+      {/* ======================================================== */}
+      <section id="lifestyle" className="py-20 bg-white border-b border-[#eae7e1]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-            {/* Description Narrative */}
+            {/* Left Narrative: Exact Content from Screenshot 1 */}
             <div className="lg:col-span-7 space-y-6">
-              <div>
-                <span className="text-xs uppercase tracking-[0.25em] text-[#c5a880] font-semibold block mb-2">
-                  Project Overview
-                </span>
-                <h2 className="font-serif-luxury text-3xl sm:text-4xl font-normal text-white">
-                  About Arihant Spaces (Mira), Anna Nagar East
-                </h2>
-              </div>
+              <h2 className="font-serif-luxury text-3xl sm:text-5xl font-normal text-[#262638]">
+                The Mira Lifestyle
+              </h2>
 
-              <p className="text-sm sm:text-base text-[#cfcbbe] font-light leading-relaxed">
-                <strong className="text-white font-medium">Arihant Spaces (Mira)</strong> is an
-                exclusive, under-construction ultra-luxury residential development brought to life by{" "}
-                <strong className="text-white font-medium">Arihant Foundations & Housing Ltd</strong>.
-                Positioned in the prime avenue of D Block, 3rd Cross Street, Anna Nagar East, Chennai,
-                this project redefines bespoke urban living with an unprecedented low density of just{" "}
-                <span className="text-[#c5a880] font-medium">5 private palatial residences</span>.
+              <p className="text-sm sm:text-base text-[#262638]/90 font-light leading-relaxed">
+                A home that feels expansive in every way, movements feel natural, and living feels
+                uncontained. A rare typology that brings the essence of a private home into the sky.
               </p>
 
-              <p className="text-sm text-[#a0a3ab] font-light leading-relaxed">
-                Structured as a Stilt + 5 Floors boutique tower, each level hosts exactly one 4 BHK home
-                of approximately 3,308 sq. ft. With zero common shared walls, private elevator foyer
-                access, and triple-aspect cross-ventilation, residents experience the unhindered privacy
-                of an independent bungalow with the security and maintenance advantages of a gated
-                residence.
+              <p className="text-sm sm:text-base text-[#5e6074] font-light leading-relaxed">
+                Minimal in form and refined in detail, the lobby and the well appointed terrace are
+                elegant bookends to the residences — where privacy and restraint define luxury.
               </p>
 
-              {/* Project Bullet Highlights as on Goed Properties */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-4">
-                <div className="flex items-center gap-2.5 text-xs text-white/90">
-                  <Check className="w-4 h-4 text-[#c5a880] shrink-0" />
-                  <span>Ultra-Exclusive: 1 Apartment Per Floor</span>
+              {/* Exact Features Listed in Screenshot 1 */}
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-y-4 gap-x-6 pt-6 border-t border-[#eae7e1] text-xs font-medium text-[#262638]">
+                <div className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#c58b5c]"></span>
+                  <span>Landscaped Terrace Garden</span>
                 </div>
-                <div className="flex items-center gap-2.5 text-xs text-white/90">
-                  <Check className="w-4 h-4 text-[#c5a880] shrink-0" />
-                  <span>Sprawling 3,308 Sq. Ft. Floor Plates</span>
+                <div className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#c58b5c]"></span>
+                  <span>Rainwater harvesting</span>
                 </div>
-                <div className="flex items-center gap-2.5 text-xs text-white/90">
-                  <Check className="w-4 h-4 text-[#c5a880] shrink-0" />
-                  <span>Red Laterite Stone Façade Architecture</span>
+                <div className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#c58b5c]"></span>
+                  <span>100% Power Backup</span>
                 </div>
-                <div className="flex items-center gap-2.5 text-xs text-white/90">
-                  <Check className="w-4 h-4 text-[#c5a880] shrink-0" />
-                  <span>Direct Biometric Elevator Entrance</span>
+                <div className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#c58b5c]"></span>
+                  <span>24×7 Security</span>
                 </div>
-                <div className="flex items-center gap-2.5 text-xs text-white/90">
-                  <Check className="w-4 h-4 text-[#c5a880] shrink-0" />
-                  <span>3 Dedicated Covered Car Parking Bays</span>
+                <div className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#c58b5c]"></span>
+                  <span>Car Parking</span>
                 </div>
-                <div className="flex items-center gap-2.5 text-xs text-white/90">
-                  <Check className="w-4 h-4 text-[#c5a880] shrink-0" />
-                  <span>Separate Domestic Staff Quarters</span>
+                <div className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#c58b5c]"></span>
+                  <span>Private Elevator Foyer</span>
                 </div>
               </div>
             </div>
 
-            {/* Quick Fact Sheet / Snapshot Table */}
-            <div className="lg:col-span-5 bg-[#14171d] border border-white/10 p-6 sm:p-8">
-              <h3 className="font-serif-luxury text-xl text-white mb-4 border-b border-white/10 pb-3 flex items-center justify-between">
+            {/* Right: Goed Properties Project Snapshot Table */}
+            <div className="lg:col-span-5 bg-[#f8f6f2] rounded-2xl border border-[#eae7e1] p-6 sm:p-8">
+              <h3 className="font-serif-luxury text-xl text-[#262638] font-semibold mb-4 border-b border-[#eae7e1] pb-3 flex items-center justify-between">
                 <span>Project Snapshot</span>
-                <Info className="w-4 h-4 text-[#c5a880]" />
+                <Info className="w-4 h-4 text-[#c58b5c]" />
               </h3>
 
               <div className="space-y-3 text-xs">
-                <div className="flex justify-between py-1.5 border-b border-white/5">
-                  <span className="text-[#a0a3ab]">Project Name</span>
-                  <span className="text-white font-medium">Arihant Spaces (Mira)</span>
+                <div className="flex justify-between py-1 border-b border-[#eae7e1]">
+                  <span className="text-[#5e6074]">Project Name</span>
+                  <span className="text-[#262638] font-semibold">Arihant Spaces (Mira)</span>
                 </div>
-
-                <div className="flex justify-between py-1.5 border-b border-white/5">
-                  <span className="text-[#a0a3ab]">Developer</span>
-                  <span className="text-white font-medium">Arihant Foundations & Housing Ltd</span>
+                <div className="flex justify-between py-1 border-b border-[#eae7e1]">
+                  <span className="text-[#5e6074]">Developer</span>
+                  <span className="text-[#262638] font-medium">Arihant Foundations & Housing Ltd</span>
                 </div>
-
-                <div className="flex justify-between py-1.5 border-b border-white/5">
-                  <span className="text-[#a0a3ab]">Marketing Partner</span>
-                  <span className="text-white font-medium">Goed Properties & Promoters</span>
+                <div className="flex justify-between py-1 border-b border-[#eae7e1]">
+                  <span className="text-[#5e6074]">Location</span>
+                  <span className="text-[#262638] font-medium">D Block, Anna Nagar East, Chennai</span>
                 </div>
-
-                <div className="flex justify-between py-1.5 border-b border-white/5">
-                  <span className="text-[#a0a3ab]">Location</span>
-                  <span className="text-white font-medium">D Block, Anna Nagar East, Chennai</span>
+                <div className="flex justify-between py-1 border-b border-[#eae7e1]">
+                  <span className="text-[#5e6074]">Scale & Structure</span>
+                  <span className="text-[#262638] font-medium">Stilt + 5 Floors (5 Units Total)</span>
                 </div>
-
-                <div className="flex justify-between py-1.5 border-b border-white/5">
-                  <span className="text-[#a0a3ab]">Structure</span>
-                  <span className="text-white font-medium">Stilt + 5 Floors</span>
+                <div className="flex justify-between py-1 border-b border-[#eae7e1]">
+                  <span className="text-[#5e6074]">Unit Type</span>
+                  <span className="text-[#262638] font-medium">4 BHK Palatial Residences</span>
                 </div>
-
-                <div className="flex justify-between py-1.5 border-b border-white/5">
-                  <span className="text-[#a0a3ab]">Total Units</span>
-                  <span className="text-[#c5a880] font-semibold">5 Units Only (1/Floor)</span>
+                <div className="flex justify-between py-1 border-b border-[#eae7e1]">
+                  <span className="text-[#5e6074]">Super Built-up Area</span>
+                  <span className="text-[#262638] font-medium">Approx. 3,308 Sq. Ft.</span>
                 </div>
-
-                <div className="flex justify-between py-1.5 border-b border-white/5">
-                  <span className="text-[#a0a3ab]">Unit Variant</span>
-                  <span className="text-white font-medium">4 BHK Boutique Residences</span>
+                <div className="flex justify-between py-1 border-b border-[#eae7e1]">
+                  <span className="text-[#5e6074]">Status</span>
+                  <span className="text-[#c58b5c] font-semibold">Under Construction</span>
                 </div>
-
-                <div className="flex justify-between py-1.5 border-b border-white/5">
-                  <span className="text-[#a0a3ab]">Super Built-up Area</span>
-                  <span className="text-white font-medium">Approx. 3,308 Sq. Ft.</span>
-                </div>
-
-                <div className="flex justify-between py-1.5 border-b border-white/5">
-                  <span className="text-[#a0a3ab]">Project Status</span>
-                  <span className="text-[#dfc299] font-medium">Under Construction</span>
-                </div>
-
-                <div className="flex justify-between py-1.5">
-                  <span className="text-[#a0a3ab]">Starting Price</span>
-                  <span className="text-[#c5a880] font-semibold text-sm">₹8.5 Cr* Onwards</span>
+                <div className="flex justify-between py-1">
+                  <span className="text-[#5e6074]">Starting Price</span>
+                  <span className="text-[#262638] font-bold text-sm">₹8.5 Cr* Onwards</span>
                 </div>
               </div>
             </div>
@@ -661,59 +590,59 @@ export default function HomeClient() {
       </section>
 
       {/* ======================================================== */}
-      {/* 5. CONFIGURATION & PRICING TABLE (GOED PROPERTIES FORMAT) */}
+      {/* 6. CONFIGURATION & PRICING TABLE (GOED PROPERTIES DETAILS) */}
       {/* ======================================================== */}
-      <section id="pricing" className="py-20 border-b border-white/10 bg-[#0d0f12]">
+      <section id="pricing" className="py-20 bg-[#f8f6f2] border-b border-[#eae7e1]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <span className="text-xs uppercase tracking-[0.25em] text-[#c5a880] font-semibold block mb-2">
+            <span className="text-xs uppercase tracking-[0.25em] text-[#c58b5c] font-semibold block mb-2">
               Configuration & Pricing
             </span>
-            <h2 className="font-serif-luxury text-3xl sm:text-4xl font-normal text-white">
-              Residential Units & Investment Plans
+            <h2 className="font-serif-luxury text-3xl sm:text-4xl font-normal text-[#262638]">
+              Units & Investment Plans
             </h2>
-            <p className="text-xs sm:text-sm text-[#a0a3ab] mt-2 font-light">
-              Limited collection of 5 residences designed for families seeking generous proportions and exclusivity.
+            <p className="text-xs sm:text-sm text-[#5e6074] mt-2 font-light">
+              Limited collection of 5 residences designed for families seeking generous proportions and absolute privacy.
             </p>
           </div>
 
-          {/* Pricing Table */}
-          <div className="overflow-x-auto border border-white/10 bg-[#14171d]">
+          {/* Pricing Table with Dark Slate Header */}
+          <div className="overflow-x-auto rounded-2xl border border-[#eae7e1] bg-white shadow-sm">
             <table className="w-full text-left text-xs sm:text-sm">
-              <thead className="bg-[#090b0e] text-[#c5a880] uppercase tracking-wider text-[11px] border-b border-white/10 font-medium">
+              <thead className="bg-[#262638] text-white uppercase tracking-wider text-[11px] font-medium">
                 <tr>
                   <th className="py-4 px-6">Type</th>
                   <th className="py-4 px-6">Super Built-up Area</th>
-                  <th className="py-4 px-6">Layout Configuration</th>
+                  <th className="py-4 px-6">Configuration</th>
                   <th className="py-4 px-6">Car Parking</th>
                   <th className="py-4 px-6">Starting Price</th>
                   <th className="py-4 px-6 text-right">Action</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-white/5 text-white/90">
-                <tr className="hover:bg-white/5 transition-colors">
-                  <td className="py-5 px-6 font-medium text-white flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-[#c5a880]"></span>
+              <tbody className="divide-y divide-[#eae7e1] text-[#262638]">
+                <tr className="hover:bg-[#f8f6f2]/60 transition-colors">
+                  <td className="py-5 px-6 font-semibold flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-[#c58b5c]"></span>
                     4 BHK Luxury Palatial
                   </td>
-                  <td className="py-5 px-6 font-mono text-[#cfcbbe]">3,308 Sq. Ft.</td>
+                  <td className="py-5 px-6 font-mono font-medium">3,308 Sq. Ft.</td>
                   <td className="py-5 px-6">
-                    <span className="block text-white">4 Bed + 5 Bath + Living Salon</span>
-                    <span className="text-[11px] text-[#a0a3ab]">
+                    <span className="block font-medium">4 Bed + 5 Bath + Living Salon</span>
+                    <span className="text-[11px] text-[#5e6074]">
                       + Maid&apos;s Quarters & Private Foyer
                     </span>
                   </td>
                   <td className="py-5 px-6">3 Covered Bays (with EV socket)</td>
                   <td className="py-5 px-6">
-                    <span className="text-base font-serif-luxury text-[#c5a880] font-bold">
+                    <span className="text-base font-serif-luxury font-bold text-[#262638]">
                       ₹8.50 Cr*
                     </span>
-                    <span className="text-[10px] text-[#a0a3ab] block">+ Taxes & Registration</span>
+                    <span className="text-[10px] text-[#5e6074] block">+ Taxes & Registration</span>
                   </td>
                   <td className="py-5 px-6 text-right">
                     <button
                       onClick={() => setPriceBreakupModalOpen(true)}
-                      className="px-4 py-2 bg-[#c5a880] hover:bg-[#dfc299] text-[#0d0f12] text-xs uppercase tracking-wider font-semibold transition-all"
+                      className="px-5 py-2 rounded-full bg-[#262638] hover:bg-[#1a1a26] text-white text-xs uppercase tracking-wider font-semibold transition-all"
                     >
                       Price Breakup
                     </button>
@@ -723,127 +652,124 @@ export default function HomeClient() {
             </table>
           </div>
 
-          <div className="mt-4 flex flex-col sm:flex-row items-center justify-between text-[11px] text-[#a0a3ab] gap-2">
+          <div className="mt-4 flex flex-col sm:flex-row items-center justify-between text-[11px] text-[#5e6074] gap-2">
             <span>*Government charges, GST, registration, and club amenities applicable as per norms.</span>
-            <span className="text-[#c5a880]">Bank loans pre-approved with leading financial institutions.</span>
+            <span className="text-[#262638] font-medium">Pre-approved with leading financial institutions.</span>
           </div>
         </div>
       </section>
 
       {/* ======================================================== */}
-      {/* 6. FLOOR PLANS & SPATIAL BLUEPRINTS (TABBED) */}
+      {/* 7. ARCHITECTURAL PLANS & BLUEPRINTS (TABBED) */}
       {/* ======================================================== */}
-      <section id="floorplans" className="py-20 border-b border-white/10 bg-[#0f1116]">
+      <section id="plans" className="py-20 bg-white border-b border-[#eae7e1]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <span className="text-xs uppercase tracking-[0.25em] text-[#c5a880] font-semibold block mb-2">
-              Architectural Blueprints
+          <div className="text-center max-w-3xl mx-auto mb-10">
+            <span className="text-xs uppercase tracking-[0.25em] text-[#c58b5c] font-semibold block mb-2">
+              Plans & Blueprints
             </span>
-            <h2 className="font-serif-luxury text-3xl sm:text-4xl font-normal text-white">
-              Floor Plan & Spatial Layout
+            <h2 className="font-serif-luxury text-3xl sm:text-4xl font-normal text-[#262638]">
+              Spatial Layout & Architecture
             </h2>
-            <p className="text-xs sm:text-sm text-[#a0a3ab] mt-2 font-light">
-              Full-floor palatial living with zero shared walls and dedicated service integration.
-            </p>
           </div>
 
-          {/* Plan Navigation Tabs */}
+          {/* Plan Navigation Tabs (Pill Buttons) */}
           <div className="flex justify-center mb-8">
-            <div className="inline-flex border border-white/10 bg-[#090b0e] p-1 gap-1">
+            <div className="inline-flex rounded-full bg-[#f8f6f2] border border-[#eae7e1] p-1 gap-1">
               <button
                 onClick={() => setActivePlanTab("floor")}
-                className={`px-6 py-2.5 text-xs uppercase tracking-wider font-semibold transition-all ${
+                className={`px-6 py-2.5 rounded-full text-xs uppercase tracking-wider font-semibold transition-all ${
                   activePlanTab === "floor"
-                    ? "bg-[#c5a880] text-[#0d0f12]"
-                    : "text-[#a0a3ab] hover:text-white"
+                    ? "bg-[#262638] text-white"
+                    : "text-[#5e6074] hover:text-[#262638]"
                 }`}
               >
-                Typical 4 BHK Floor Plan (3,308 Sq.Ft)
+                Typical 4 BHK Plan (3,308 Sq.Ft)
               </button>
               <button
                 onClick={() => setActivePlanTab("master")}
-                className={`px-6 py-2.5 text-xs uppercase tracking-wider font-semibold transition-all ${
+                className={`px-6 py-2.5 rounded-full text-xs uppercase tracking-wider font-semibold transition-all ${
                   activePlanTab === "master"
-                    ? "bg-[#c5a880] text-[#0d0f12]"
-                    : "text-[#a0a3ab] hover:text-white"
+                    ? "bg-[#262638] text-white"
+                    : "text-[#5e6074] hover:text-[#262638]"
                 }`}
               >
-                Master Suite & Balcony Zoning
+                Master Suite Zoning
               </button>
               <button
                 onClick={() => setActivePlanTab("terrace")}
-                className={`px-6 py-2.5 text-xs uppercase tracking-wider font-semibold transition-all ${
+                className={`px-6 py-2.5 rounded-full text-xs uppercase tracking-wider font-semibold transition-all ${
                   activePlanTab === "terrace"
-                    ? "bg-[#c5a880] text-[#0d0f12]"
-                    : "text-[#a0a3ab] hover:text-white"
+                    ? "bg-[#262638] text-white"
+                    : "text-[#5e6074] hover:text-[#262638]"
                 }`}
               >
-                Terrace Sky Lounge Plan
+                Rooftop Sky Terrace
               </button>
             </div>
           </div>
 
           {/* Floor Plan Display Card */}
-          <div className="bg-[#14171d] border border-white/10 p-6 sm:p-10">
+          <div className="bg-[#f8f6f2] rounded-2xl border border-[#eae7e1] p-6 sm:p-10">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-              {/* Visual Architectural Schematic */}
-              <div className="lg:col-span-8 bg-[#090b0e] border border-white/10 p-8 sm:p-12 relative flex items-center justify-center min-h-[400px]">
+              {/* Visual Blueprint Diagram */}
+              <div className="lg:col-span-8 bg-white rounded-xl border border-[#eae7e1] p-8 sm:p-12 relative flex items-center justify-center min-h-[400px]">
                 {activePlanTab === "floor" && (
-                  <div className="w-full max-w-lg border-2 border-dashed border-[#c5a880]/30 p-6 text-center space-y-4">
-                    <div className="flex justify-between text-[10px] text-[#c5a880] uppercase tracking-widest font-mono">
+                  <div className="w-full max-w-lg border-2 border-dashed border-[#c58b5c]/40 rounded-xl p-6 text-center space-y-4">
+                    <div className="flex justify-between text-[10px] text-[#c58b5c] uppercase tracking-widest font-mono font-semibold">
                       <span>EAST-FACING FOYER ENTRY</span>
                       <span>VASTU COMPLIANT</span>
                     </div>
 
                     <div className="grid grid-cols-3 gap-2 text-left text-xs">
-                      <div className="border border-white/10 p-2.5 bg-white/5">
-                        <span className="text-[10px] text-[#c5a880] block">BEDROOM 01</span>
-                        <span className="font-semibold text-white">Master Suite</span>
-                        <span className="text-[10px] text-[#a0a3ab] block">16&apos;0&quot; x 18&apos;6&quot;</span>
+                      <div className="border border-[#eae7e1] rounded-lg p-2.5 bg-[#f8f6f2]">
+                        <span className="text-[10px] text-[#c58b5c] block font-semibold">SUITE 01</span>
+                        <span className="font-semibold text-[#262638]">Master Suite</span>
+                        <span className="text-[10px] text-[#5e6074] block">16&apos;0&quot; x 18&apos;6&quot;</span>
                       </div>
-                      <div className="border border-white/10 p-2.5 bg-white/5">
-                        <span className="text-[10px] text-[#c5a880] block">BEDROOM 02</span>
-                        <span className="font-semibold text-white">Guest Suite</span>
-                        <span className="text-[10px] text-[#a0a3ab] block">14&apos;0&quot; x 16&apos;0&quot;</span>
+                      <div className="border border-[#eae7e1] rounded-lg p-2.5 bg-[#f8f6f2]">
+                        <span className="text-[10px] text-[#c58b5c] block font-semibold">SUITE 02</span>
+                        <span className="font-semibold text-[#262638]">Guest Suite</span>
+                        <span className="text-[10px] text-[#5e6074] block">14&apos;0&quot; x 16&apos;0&quot;</span>
                       </div>
-                      <div className="border border-white/10 p-2.5 bg-white/5">
-                        <span className="text-[10px] text-[#c5a880] block">BEDROOM 03</span>
-                        <span className="font-semibold text-white">Family Suite</span>
-                        <span className="text-[10px] text-[#a0a3ab] block">13&apos;6&quot; x 15&apos;0&quot;</span>
+                      <div className="border border-[#eae7e1] rounded-lg p-2.5 bg-[#f8f6f2]">
+                        <span className="text-[10px] text-[#c58b5c] block font-semibold">SUITE 03</span>
+                        <span className="font-semibold text-[#262638]">Family Suite</span>
+                        <span className="text-[10px] text-[#5e6074] block">13&apos;6&quot; x 15&apos;0&quot;</span>
                       </div>
                     </div>
 
-                    <div className="border border-[#c5a880]/60 p-5 bg-[#c5a880]/10 text-center">
-                      <span className="text-xs uppercase tracking-widest text-[#c5a880] font-semibold block">
+                    <div className="border border-[#262638] rounded-lg p-5 bg-[#262638] text-white text-center">
+                      <span className="text-xs uppercase tracking-widest text-[#d9a779] font-semibold block">
                         Grand Social Salon & Dining
                       </span>
-                      <span className="text-sm font-serif-luxury text-white">
+                      <span className="text-sm font-serif-luxury">
                         38&apos;4&quot; x 19&apos;8&quot;
                       </span>
-                      <span className="text-[11px] text-[#cfcbbe] block mt-1">
+                      <span className="text-[11px] text-white/70 block mt-1">
                         Opens to Covered Viewing Sit-out Balcony
                       </span>
                     </div>
 
                     <div className="grid grid-cols-3 gap-2 text-left text-xs">
-                      <div className="border border-white/10 p-2.5 bg-white/5">
-                        <span className="text-[10px] text-[#c5a880] block">BEDROOM 04</span>
-                        <span className="font-semibold text-white">Children Suite</span>
-                        <span className="text-[10px] text-[#a0a3ab] block">13&apos;0&quot; x 14&apos;0&quot;</span>
+                      <div className="border border-[#eae7e1] rounded-lg p-2.5 bg-[#f8f6f2]">
+                        <span className="text-[10px] text-[#c58b5c] block font-semibold">SUITE 04</span>
+                        <span className="font-semibold text-[#262638]">Children Suite</span>
+                        <span className="text-[10px] text-[#5e6074] block">13&apos;0&quot; x 14&apos;0&quot;</span>
                       </div>
-                      <div className="border border-white/10 p-2.5 bg-white/5">
-                        <span className="text-[10px] text-[#c5a880] block">KITCHEN</span>
-                        <span className="font-semibold text-white">Dry + Wet Prep</span>
-                        <span className="text-[10px] text-[#a0a3ab] block">14&apos;6&quot; x 12&apos;0&quot;</span>
+                      <div className="border border-[#eae7e1] rounded-lg p-2.5 bg-[#f8f6f2]">
+                        <span className="text-[10px] text-[#c58b5c] block font-semibold">CULINARY</span>
+                        <span className="font-semibold text-[#262638]">Chef&apos;s Kitchen</span>
+                        <span className="text-[10px] text-[#5e6074] block">14&apos;6&quot; x 12&apos;0&quot;</span>
                       </div>
-                      <div className="border border-white/10 p-2.5 bg-white/5">
-                        <span className="text-[10px] text-[#c5a880] block">STAFF</span>
-                        <span className="font-semibold text-white">Maid + WC</span>
-                        <span className="text-[10px] text-[#a0a3ab] block">9&apos;0&quot; x 8&apos;0&quot;</span>
+                      <div className="border border-[#eae7e1] rounded-lg p-2.5 bg-[#f8f6f2]">
+                        <span className="text-[10px] text-[#c58b5c] block font-semibold">SERVICE</span>
+                        <span className="font-semibold text-[#262638]">Maid + WC</span>
+                        <span className="text-[10px] text-[#5e6074] block">9&apos;0&quot; x 8&apos;0&quot;</span>
                       </div>
                     </div>
 
-                    <div className="text-[11px] text-[#c5a880] font-mono tracking-widest">
+                    <div className="text-[11px] text-[#262638] font-mono tracking-widest font-semibold">
                       ✦ PRIVATE ELEVATOR LOBBY • EXCLUSIVE FLOOR KEYCARD ACCESS ✦
                     </div>
                   </div>
@@ -851,24 +777,24 @@ export default function HomeClient() {
 
                 {activePlanTab === "master" && (
                   <div className="text-center p-8 space-y-3">
-                    <Maximize2 className="w-12 h-12 text-[#c5a880] mx-auto" />
-                    <h4 className="font-serif-luxury text-xl text-white">
+                    <Maximize2 className="w-12 h-12 text-[#c58b5c] mx-auto" />
+                    <h4 className="font-serif-luxury text-xl text-[#262638]">
                       Master Suite Spatial Zoning
                     </h4>
-                    <p className="text-xs text-[#a0a3ab] max-w-md mx-auto">
-                      Features private walk-in dressing wardrobe, 5-fixture bath with rain shower & soaking tub,
-                      insulated timber flooring, and direct glass doors opening to the morning sun terrace.
+                    <p className="text-xs text-[#5e6074] max-w-md mx-auto">
+                      Includes private walk-in dressing lounge, 5-fixture bath with rain shower & soaking tub,
+                      insulated wooden flooring, and floor-to-ceiling glass doors opening to the morning terrace.
                     </p>
                   </div>
                 )}
 
                 {activePlanTab === "terrace" && (
                   <div className="text-center p-8 space-y-3">
-                    <Sparkles className="w-12 h-12 text-[#c5a880] mx-auto" />
-                    <h4 className="font-serif-luxury text-xl text-white">
+                    <Sparkles className="w-12 h-12 text-[#c58b5c] mx-auto" />
+                    <h4 className="font-serif-luxury text-xl text-[#262638]">
                       Rooftop Sky Lounge Layout
                     </h4>
-                    <p className="text-xs text-[#a0a3ab] max-w-md mx-auto">
+                    <p className="text-xs text-[#5e6074] max-w-md mx-auto">
                       Shared exclusively by the 5 families: landscaped zen garden deck, barbecue pavilion,
                       shaded meditation cabana, and panoramic city lights views over Anna Nagar.
                     </p>
@@ -879,56 +805,47 @@ export default function HomeClient() {
               {/* Plan Specs Column */}
               <div className="lg:col-span-4 space-y-5">
                 <div>
-                  <span className="text-[11px] uppercase tracking-wider text-[#c5a880] font-semibold">
+                  <span className="text-[11px] uppercase tracking-wider text-[#c58b5c] font-semibold">
                     Spatial Specifications
                   </span>
-                  <h3 className="font-serif-luxury text-2xl text-white mt-1">
+                  <h3 className="font-serif-luxury text-2xl text-[#262638] mt-1">
                     3,308 Sq. Ft. Palatial Layout
                   </h3>
-                  <p className="text-xs text-[#a0a3ab] mt-2 font-light">
+                  <p className="text-xs text-[#5e6074] mt-2 font-light">
                     Every residence is an independent sanctuary covering the entire floor plate with 360° light.
                   </p>
                 </div>
 
-                <div className="space-y-2.5 border-t border-b border-white/10 py-4 text-xs">
+                <div className="space-y-2.5 border-t border-b border-[#eae7e1] py-4 text-xs">
                   <div className="flex justify-between">
-                    <span className="text-[#a0a3ab]">Super Built-up Area:</span>
-                    <span className="text-white font-medium">3,308 Sq. Ft.</span>
+                    <span className="text-[#5e6074]">Super Built-up Area:</span>
+                    <span className="text-[#262638] font-semibold">3,308 Sq. Ft.</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-[#a0a3ab]">Configuration:</span>
-                    <span className="text-white font-medium">4 BHK + Maid&apos;s Quarters</span>
+                    <span className="text-[#5e6074]">Configuration:</span>
+                    <span className="text-[#262638] font-semibold">4 BHK + Maid&apos;s Quarters</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-[#a0a3ab]">Balconies:</span>
-                    <span className="text-white font-medium">2 Private Covered Sit-outs</span>
+                    <span className="text-[#5e6074]">Balconies:</span>
+                    <span className="text-[#262638] font-semibold">2 Private Covered Sit-outs</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-[#a0a3ab]">Bathrooms:</span>
-                    <span className="text-white font-medium">5 Toilets (4 Ensuite + 1 Staff)</span>
+                    <span className="text-[#5e6074]">Bathrooms:</span>
+                    <span className="text-[#262638] font-semibold">5 Toilets (4 Ensuite + 1 Staff)</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-[#a0a3ab]">Stilt Parking:</span>
-                    <span className="text-white font-medium">3 Covered Bays / Unit</span>
+                    <span className="text-[#5e6074]">Stilt Parking:</span>
+                    <span className="text-[#262638] font-semibold">3 Covered Bays / Unit</span>
                   </div>
                 </div>
 
-                <div className="flex flex-col gap-2.5">
-                  <button
-                    onClick={() => setBrochureModalOpen(true)}
-                    className="w-full py-3.5 bg-[#c5a880] hover:bg-[#dfc299] text-[#0d0f12] text-xs uppercase tracking-widest font-semibold transition-all flex items-center justify-center gap-2"
-                  >
-                    <Download className="w-4 h-4" />
-                    Download Blueprint PDF
-                  </button>
-
-                  <button
-                    onClick={() => setSiteVisitModalOpen(true)}
-                    className="w-full py-3.5 border border-[#c5a880]/50 hover:border-[#c5a880] text-white text-xs uppercase tracking-widest font-medium transition-all"
-                  >
-                    Request Physical Walkthrough
-                  </button>
-                </div>
+                <button
+                  onClick={() => setBrochureModalOpen(true)}
+                  className="w-full py-3.5 rounded-full bg-[#262638] hover:bg-[#1a1a26] text-white text-xs uppercase tracking-widest font-semibold transition-all flex items-center justify-center gap-2"
+                >
+                  <Download className="w-4 h-4" />
+                  Download Blueprint PDF
+                </button>
               </div>
             </div>
           </div>
@@ -936,98 +853,17 @@ export default function HomeClient() {
       </section>
 
       {/* ======================================================== */}
-      {/* 7. AMENITIES & SPECIFICATIONS GRID */}
+      {/* 8. VISUAL GALLERY (MATCHING SCREENSHOT 3) */}
       {/* ======================================================== */}
-      <section id="amenities" className="py-20 border-b border-white/10 bg-[#0d0f12]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-14">
-            <span className="text-xs uppercase tracking-[0.25em] text-[#c5a880] font-semibold block mb-2">
-              Exclusive Amenities
-            </span>
-            <h2 className="font-serif-luxury text-3xl sm:text-4xl font-normal text-white">
-              Curated Privileges for 5 Families
-            </h2>
-            <p className="text-xs sm:text-sm text-[#a0a3ab] mt-2 font-light">
-              Tailored for privacy and low maintenance without large crowded clubs.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="p-6 bg-[#14171d] border border-white/10 hover:border-[#c5a880]/40 transition-all">
-              <KeyRound className="w-8 h-8 text-[#c5a880] mb-4" />
-              <h3 className="font-serif-luxury text-lg text-white mb-2">
-                Private Elevator Foyer
-              </h3>
-              <p className="text-xs text-[#a0a3ab] leading-relaxed">
-                High-speed automatic lift programmed to open exclusively inside your home’s private access lobby.
-              </p>
-            </div>
-
-            <div className="p-6 bg-[#14171d] border border-white/10 hover:border-[#c5a880]/40 transition-all">
-              <Sparkles className="w-8 h-8 text-[#c5a880] mb-4" />
-              <h3 className="font-serif-luxury text-lg text-white mb-2">
-                Rooftop Sky Terrace Lounge
-              </h3>
-              <p className="text-xs text-[#a0a3ab] leading-relaxed">
-                Landscaped terrace with private sunset dining, landscaped planters, and relaxation cabanas.
-              </p>
-            </div>
-
-            <div className="p-6 bg-[#14171d] border border-white/10 hover:border-[#c5a880]/40 transition-all">
-              <Zap className="w-8 h-8 text-[#c5a880] mb-4" />
-              <h3 className="font-serif-luxury text-lg text-white mb-2">
-                100% DG Power Backup
-              </h3>
-              <p className="text-xs text-[#a0a3ab] leading-relaxed">
-                Uninterrupted silent diesel generator backup supporting air-conditioning, lights, and heavy appliances.
-              </p>
-            </div>
-
-            <div className="p-6 bg-[#14171d] border border-white/10 hover:border-[#c5a880]/40 transition-all">
-              <Car className="w-8 h-8 text-[#c5a880] mb-4" />
-              <h3 className="font-serif-luxury text-lg text-white mb-2">
-                3 Covered Parks & EV Ready
-              </h3>
-              <p className="text-xs text-[#a0a3ab] leading-relaxed">
-                Dedicated stilt car parking bays equipped with electric vehicle charging provisions.
-              </p>
-            </div>
-
-            <div className="p-6 bg-[#14171d] border border-white/10 hover:border-[#c5a880]/40 transition-all">
-              <Shield className="w-8 h-8 text-[#c5a880] mb-4" />
-              <h3 className="font-serif-luxury text-lg text-white mb-2">
-                Multi-Tier Security & CCTV
-              </h3>
-              <p className="text-xs text-[#a0a3ab] leading-relaxed">
-                24x7 trained security, perimeter surveillance cameras, video door phone, and access control.
-              </p>
-            </div>
-
-            <div className="p-6 bg-[#14171d] border border-white/10 hover:border-[#c5a880]/40 transition-all">
-              <Layers className="w-8 h-8 text-[#c5a880] mb-4" />
-              <h3 className="font-serif-luxury text-lg text-white mb-2">
-                Domestic Staff Suite & Service Lift
-              </h3>
-              <p className="text-xs text-[#a0a3ab] leading-relaxed">
-                Separate service stairs, delivery lobby, and dedicated domestic staff room with attached washroom.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ======================================================== */}
-      {/* 8. PHOTO GALLERY & VISUAL WALKTHROUGH */}
-      {/* ======================================================== */}
-      <section id="gallery" className="py-20 border-b border-white/10 bg-[#0f1116]">
+      <section id="gallery" className="py-20 bg-[#f8f6f2] border-b border-[#eae7e1]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
             <div>
-              <span className="text-xs uppercase tracking-[0.25em] text-[#c5a880] font-semibold block mb-2">
-                Project Gallery
+              <span className="text-xs uppercase tracking-[0.25em] text-[#c58b5c] font-semibold block mb-2">
+                Visual Impressions
               </span>
-              <h2 className="font-serif-luxury text-3xl sm:text-4xl font-normal text-white">
-                Visual Impressions & Walkthrough
+              <h2 className="font-serif-luxury text-3xl sm:text-4xl font-normal text-[#262638]">
+                Project Gallery & Elevation
               </h2>
             </div>
 
@@ -1035,43 +871,43 @@ export default function HomeClient() {
             <div className="flex flex-wrap gap-2 text-xs">
               <button
                 onClick={() => setGalleryFilter("all")}
-                className={`px-4 py-2 uppercase tracking-wider transition-all ${
+                className={`px-5 py-2 rounded-full uppercase tracking-wider transition-all ${
                   galleryFilter === "all"
-                    ? "bg-[#c5a880] text-[#0d0f12] font-semibold"
-                    : "bg-[#14171d] text-[#a0a3ab] hover:text-white"
+                    ? "bg-[#262638] text-white font-semibold"
+                    : "bg-white text-[#5e6074] hover:text-[#262638] border border-[#eae7e1]"
                 }`}
               >
                 All
               </button>
               <button
                 onClick={() => setGalleryFilter("exterior")}
-                className={`px-4 py-2 uppercase tracking-wider transition-all ${
+                className={`px-5 py-2 rounded-full uppercase tracking-wider transition-all ${
                   galleryFilter === "exterior"
-                    ? "bg-[#c5a880] text-[#0d0f12] font-semibold"
-                    : "bg-[#14171d] text-[#a0a3ab] hover:text-white"
+                    ? "bg-[#262638] text-white font-semibold"
+                    : "bg-white text-[#5e6074] hover:text-[#262638] border border-[#eae7e1]"
                 }`}
               >
-                Exterior & Laterite
+                Laterite Façade
               </button>
               <button
                 onClick={() => setGalleryFilter("interior")}
-                className={`px-4 py-2 uppercase tracking-wider transition-all ${
+                className={`px-5 py-2 rounded-full uppercase tracking-wider transition-all ${
                   galleryFilter === "interior"
-                    ? "bg-[#c5a880] text-[#0d0f12] font-semibold"
-                    : "bg-[#14171d] text-[#a0a3ab] hover:text-white"
+                    ? "bg-[#262638] text-white font-semibold"
+                    : "bg-white text-[#5e6074] hover:text-[#262638] border border-[#eae7e1]"
                 }`}
               >
                 Interiors
               </button>
               <button
                 onClick={() => setGalleryFilter("amenities")}
-                className={`px-4 py-2 uppercase tracking-wider transition-all ${
+                className={`px-5 py-2 rounded-full uppercase tracking-wider transition-all ${
                   galleryFilter === "amenities"
-                    ? "bg-[#c5a880] text-[#0d0f12] font-semibold"
-                    : "bg-[#14171d] text-[#a0a3ab] hover:text-white"
+                    ? "bg-[#262638] text-white font-semibold"
+                    : "bg-white text-[#5e6074] hover:text-[#262638] border border-[#eae7e1]"
                 }`}
               >
-                Terrace & Lifestyle
+                Terrace Deck
               </button>
             </div>
           </div>
@@ -1080,20 +916,20 @@ export default function HomeClient() {
             {filteredGallery.map((item) => (
               <div
                 key={item.id}
-                className="group relative overflow-hidden bg-[#14171d] border border-white/10 aspect-[4/3]"
+                className="group relative overflow-hidden rounded-xl bg-white border border-[#eae7e1] aspect-[4/3] shadow-sm"
               >
                 <img
                   src={item.img}
                   alt={item.title}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0d0f12] via-transparent to-transparent opacity-90 group-hover:opacity-95 transition-opacity"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                 <div className="absolute bottom-4 left-4 right-4 text-left">
-                  <span className="text-[10px] uppercase tracking-wider text-[#c5a880] block mb-1">
+                  <span className="text-[10px] uppercase tracking-wider text-[#d9a779] block mb-1 font-semibold">
                     {item.category}
                   </span>
                   <h4 className="font-serif-luxury text-base text-white">{item.title}</h4>
-                  <p className="text-[11px] text-[#a0a3ab] font-light mt-0.5 line-clamp-2">
+                  <p className="text-[11px] text-white/80 font-light mt-0.5 line-clamp-2">
                     {item.desc}
                   </p>
                 </div>
@@ -1104,101 +940,102 @@ export default function HomeClient() {
       </section>
 
       {/* ======================================================== */}
-      {/* 9. LOCATION & PROXIMITY MAP (ANNA NAGAR EAST) */}
+      {/* 9. NEIGHBOURHOOD & CONNECTIVITY (ANNA NAGAR EAST) */}
       {/* ======================================================== */}
-      <section id="location" className="py-20 border-b border-white/10 bg-[#0d0f12]">
+      <section id="neighbourhood" className="py-20 bg-white border-b border-[#eae7e1]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-            {/* Left Distances List as on Goed Properties */}
+            {/* Distances List */}
             <div className="lg:col-span-6 space-y-6">
               <div>
-                <span className="text-xs uppercase tracking-[0.25em] text-[#c5a880] font-semibold block mb-2">
-                  Neighborhood & Connectivity
+                <span className="text-xs uppercase tracking-[0.25em] text-[#c58b5c] font-semibold block mb-2">
+                  Neighbourhood & Connectivity
                 </span>
-                <h2 className="font-serif-luxury text-3xl sm:text-4xl font-normal text-white">
-                  Prime Address: D Block, Anna Nagar East
+                <h2 className="font-serif-luxury text-3xl sm:text-4xl font-normal text-[#262638]">
+                  D Block, Anna Nagar East
                 </h2>
-                <p className="text-xs sm:text-sm text-[#a0a3ab] mt-2 font-light">
-                  Anna Nagar East stands among Chennai’s most established residential havens with planned tree-lined
-                  boulevards and immediate metro connectivity.
+                <p className="text-xs sm:text-sm text-[#5e6074] mt-2 font-light">
+                  A revered, quiet residential boulevard with wide tree-lined avenues and immediate connectivity to
+                  transit hubs, premier academic institutions, and healthcare centers.
                 </p>
               </div>
 
               <div className="space-y-3 text-xs">
-                <div className="p-3.5 bg-[#14171d] border border-white/5 flex items-center justify-between">
-                  <span className="flex items-center gap-2 text-white">
-                    <MapPin className="w-4 h-4 text-[#c5a880]" />
+                <div className="p-3.5 rounded-xl bg-[#f8f6f2] border border-[#eae7e1] flex items-center justify-between">
+                  <span className="flex items-center gap-2 text-[#262638] font-medium">
+                    <MapPin className="w-4 h-4 text-[#c58b5c]" />
                     Anna Nagar East Metro Station
                   </span>
-                  <span className="text-[#c5a880] font-mono font-medium">800 Meters | 2 Mins</span>
+                  <span className="text-[#262638] font-mono font-semibold">800 M | 2 Mins</span>
                 </div>
 
-                <div className="p-3.5 bg-[#14171d] border border-white/5 flex items-center justify-between">
-                  <span className="flex items-center gap-2 text-white">
-                    <MapPin className="w-4 h-4 text-[#c5a880]" />
+                <div className="p-3.5 rounded-xl bg-[#f8f6f2] border border-[#eae7e1] flex items-center justify-between">
+                  <span className="flex items-center gap-2 text-[#262638] font-medium">
+                    <MapPin className="w-4 h-4 text-[#c58b5c]" />
                     Anna Nagar Tower Park & Shanthi Colony
                   </span>
-                  <span className="text-[#c5a880] font-mono font-medium">1.2 Km | 3 Mins</span>
+                  <span className="text-[#262638] font-mono font-semibold">1.2 Km | 3 Mins</span>
                 </div>
 
-                <div className="p-3.5 bg-[#14171d] border border-white/5 flex items-center justify-between">
-                  <span className="flex items-center gap-2 text-white">
-                    <MapPin className="w-4 h-4 text-[#c5a880]" />
+                <div className="p-3.5 rounded-xl bg-[#f8f6f2] border border-[#eae7e1] flex items-center justify-between">
+                  <span className="flex items-center gap-2 text-[#262638] font-medium">
+                    <MapPin className="w-4 h-4 text-[#c58b5c]" />
                     Chinmaya Vidyalaya & CPS Global School
                   </span>
-                  <span className="text-[#c5a880] font-mono font-medium">1.0 Km | 4 Mins</span>
+                  <span className="text-[#262638] font-mono font-semibold">1.0 Km | 4 Mins</span>
                 </div>
 
-                <div className="p-3.5 bg-[#14171d] border border-white/5 flex items-center justify-between">
-                  <span className="flex items-center gap-2 text-white">
-                    <MapPin className="w-4 h-4 text-[#c5a880]" />
+                <div className="p-3.5 rounded-xl bg-[#f8f6f2] border border-[#eae7e1] flex items-center justify-between">
+                  <span className="flex items-center gap-2 text-[#262638] font-medium">
+                    <MapPin className="w-4 h-4 text-[#c58b5c]" />
                     Billroth Hospital & MGM Healthcare
                   </span>
-                  <span className="text-[#c5a880] font-mono font-medium">1.1 Km | 4 Mins</span>
+                  <span className="text-[#262638] font-mono font-semibold">1.1 Km | 4 Mins</span>
                 </div>
 
-                <div className="p-3.5 bg-[#14171d] border border-white/5 flex items-center justify-between">
-                  <span className="flex items-center gap-2 text-white">
-                    <MapPin className="w-4 h-4 text-[#c5a880]" />
+                <div className="p-3.5 rounded-xl bg-[#f8f6f2] border border-[#eae7e1] flex items-center justify-between">
+                  <span className="flex items-center gap-2 text-[#262638] font-medium">
+                    <MapPin className="w-4 h-4 text-[#c58b5c]" />
                     Poonamallee High Road & Kilpauk
                   </span>
-                  <span className="text-[#c5a880] font-mono font-medium">1.8 Km | 5 Mins</span>
+                  <span className="text-[#262638] font-mono font-semibold">1.8 Km | 5 Mins</span>
                 </div>
               </div>
             </div>
 
-            {/* Right Interactive Location Card */}
-            <div className="lg:col-span-6 bg-[#14171d] border border-white/10 p-6 sm:p-8">
-              <span className="text-[11px] uppercase tracking-wider text-[#c5a880] font-semibold block mb-2">
-                Geographic Location
+            {/* Location Visual Card */}
+            <div className="lg:col-span-6 bg-[#f8f6f2] rounded-2xl border border-[#eae7e1] p-6 sm:p-8">
+              <span className="text-[11px] uppercase tracking-wider text-[#c58b5c] font-semibold block mb-2">
+                Geographic Coordinates
               </span>
-              <h3 className="font-serif-luxury text-2xl text-white mb-2">
+              <h3 className="font-serif-luxury text-2xl text-[#262638] mb-2">
                 Arihant Spaces (Mira) Site
               </h3>
-              <p className="text-xs text-[#a0a3ab] mb-6">
+              <p className="text-xs text-[#5e6074] mb-6">
                 D Block, 3rd Cross Street, Anna Nagar East, Chennai – 600102
               </p>
 
-              {/* Map Illustration Box */}
-              <div className="aspect-[16/10] bg-[#090b0e] border border-white/10 relative overflow-hidden flex items-center justify-center p-6 text-center">
+              <div className="aspect-[16/10] bg-white rounded-xl border border-[#eae7e1] relative overflow-hidden flex items-center justify-center p-6 text-center">
                 <div className="space-y-3">
-                  <div className="w-12 h-12 rounded-full bg-[#c5a880] text-[#0d0f12] flex items-center justify-center mx-auto shadow-lg shadow-[#c5a880]/30 animate-bounce">
-                    <MapPin className="w-6 h-6" />
+                  <div className="w-12 h-12 rounded-full bg-[#262638] text-white flex items-center justify-center mx-auto shadow-md animate-bounce">
+                    <MapPin className="w-6 h-6 text-[#d9a779]" />
                   </div>
                   <div>
-                    <h4 className="font-serif-luxury text-lg text-white">Arihant Spaces (Mira)</h4>
-                    <span className="text-xs text-[#c5a880]">D Block, Anna Nagar East</span>
+                    <h4 className="font-serif-luxury text-lg text-[#262638] font-semibold">
+                      Arihant Spaces (Mira)
+                    </h4>
+                    <span className="text-xs text-[#c58b5c] font-medium">D Block, Anna Nagar East</span>
                   </div>
                 </div>
               </div>
 
               <div className="mt-5 flex items-center justify-between text-xs">
-                <span className="text-[#a0a3ab]">Landmark: Near Anna Nagar East Post Office</span>
+                <span className="text-[#5e6074]">Landmark: Near Anna Nagar East Post Office</span>
                 <a
                   href="https://maps.google.com/?q=Anna+Nagar+East+Chennai"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#c5a880] hover:underline flex items-center gap-1 font-medium"
+                  className="text-[#262638] font-semibold hover:underline flex items-center gap-1"
                 >
                   Open in Google Maps <ExternalLink className="w-3.5 h-3.5" />
                 </a>
@@ -1209,196 +1046,215 @@ export default function HomeClient() {
       </section>
 
       {/* ======================================================== */}
-      {/* 10. ABOUT DEVELOPER & CHANNEL PARTNER CO-BRANDING */}
+      {/* 10. EXACT FOOTER FROM SCREENSHOT 2 (DEEP SLATE NAVY #242533) */}
       {/* ======================================================== */}
-      <section className="py-16 border-b border-white/10 bg-[#0f1116]">
+      <footer id="contact" className="bg-[#242533] text-[#9fa1b4] pt-16 pb-12 text-xs">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Developer Details */}
-            <div className="bg-[#14171d] border border-white/10 p-6 sm:p-8 space-y-3">
-              <span className="text-[11px] uppercase tracking-wider text-[#c5a880] font-semibold block">
-                About the Developer
-              </span>
-              <h3 className="font-serif-luxury text-2xl text-white">
-                Arihant Foundations & Housing Ltd
-              </h3>
-              <p className="text-xs text-[#a0a3ab] leading-relaxed font-light">
-                Over 30 years of landmark real estate craftsmanship in Chennai. Pioneers in bringing
-                European and contemporary architectural aesthetics to residential developments with over
-                15 million sq. ft. of residential and commercial spaces delivered.
-              </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-white/10">
+            {/* Col 1: Logo & Say Hello */}
+            <div className="space-y-6">
+              <div>
+                <div className="flex items-baseline gap-1">
+                  <span className="font-bold text-3xl tracking-tight text-white">
+                    Arihant
+                  </span>
+                  <span className="text-xs text-white">®</span>
+                </div>
+                <span className="text-xs lowercase tracking-wider text-[#9fa1b4] block mt-0.5">
+                  memorable spaces
+                </span>
+              </div>
+
+              <div className="space-y-2">
+                <h5 className="text-[11px] uppercase tracking-[0.2em] text-white font-semibold">
+                  SAY HELLO
+                </h5>
+                <p className="text-xs text-[#9fa1b4]">
+                  TEL: <a href="tel:+914442244444" className="text-white hover:underline">+91 44 4224 4444</a>
+                </p>
+                <p className="text-xs text-[#9fa1b4]">
+                  MOBILE: <a href="tel:+917601000444" className="text-white hover:underline">+91 7601 000 444</a>
+                </p>
+              </div>
+
+              <div className="space-y-2">
+                <h5 className="text-[11px] uppercase tracking-[0.2em] text-white font-semibold">
+                  FOLLOW US
+                </h5>
+                <div className="flex gap-2">
+                  <span className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-white text-xs">in</span>
+                  <span className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-white text-xs">ig</span>
+                  <span className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-white text-xs">yt</span>
+                  <span className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-white text-xs">X</span>
+                  <span className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-white text-xs">fb</span>
+                </div>
+              </div>
             </div>
 
-            {/* Goed Properties Channel Partner Details */}
-            <div className="bg-[#14171d] border border-white/10 p-6 sm:p-8 space-y-3">
-              <span className="text-[11px] uppercase tracking-wider text-[#c5a880] font-semibold block">
-                About Marketing Partner
-              </span>
-              <h3 className="font-serif-luxury text-2xl text-white">
-                Goed Properties & Promoters
-              </h3>
-              <p className="text-xs text-[#a0a3ab] leading-relaxed font-light">
-                Chennai-based premier real estate advisory headquartered in Anna Nagar, Chennai.
-                Specializing in luxury residences, legal due diligence, title verification, and end-to-end
-                buyer consultation for prestigious developments.
-              </p>
+            {/* Col 2: Navigation */}
+            <div className="space-y-4">
+              <h5 className="text-[11px] uppercase tracking-[0.2em] text-white font-semibold">
+                NAVIGATION
+              </h5>
+              <div className="grid grid-cols-2 gap-y-2.5 text-xs text-[#9fa1b4]">
+                <a href="#lifestyle" className="hover:text-white transition-colors">ACTIVE PROJECTS</a>
+                <a href="#" className="hover:text-white transition-colors">ABOUT</a>
+                <a href="#" className="hover:text-white transition-colors">DELIVERED PROJECTS</a>
+                <a href="#" className="hover:text-white transition-colors">INVESTORS</a>
+                <a href="#" className="hover:text-white transition-colors">REFER A FRIEND</a>
+                <a href="#" className="hover:text-white transition-colors">BLOG</a>
+                <a href="#" className="hover:text-white transition-colors">CAREERS</a>
+              </div>
+            </div>
+
+            {/* Col 3: Write to Us & Come See Us */}
+            <div className="space-y-6">
+              <div className="space-y-1.5">
+                <h5 className="text-[11px] uppercase tracking-[0.2em] text-white font-semibold">
+                  WRITE TO US
+                </h5>
+                <p className="text-xs text-[#9fa1b4]">GENERAL ENQUIRIES:</p>
+                <a href="mailto:INFO@ARIHANTS.CO.IN" className="text-white hover:underline block font-mono text-[11px]">
+                  INFO@ARIHANTS.CO.IN
+                </a>
+                <p className="text-xs text-[#9fa1b4] pt-1">SALES ENQUIRIES:</p>
+                <a href="mailto:SALES@ARIHANTS.CO.IN" className="text-white hover:underline block font-mono text-[11px]">
+                  SALES@ARIHANTS.CO.IN
+                </a>
+              </div>
+
+              <div className="space-y-1.5">
+                <h5 className="text-[11px] uppercase tracking-[0.2em] text-white font-semibold">
+                  COME SEE US
+                </h5>
+                <p className="text-xs text-[#9fa1b4] leading-relaxed">
+                  NEW #3 OLD #25, GANAPATHY COLONY 3RD LANE, OFF CENOTAPH ROAD TEYNAMPET, CHENNAI – 600 018
+                </p>
+                <p className="text-[11px] text-[#d9a779] pt-1">
+                  Site: D Block, 3rd Cross Street, Anna Nagar East
+                </p>
+              </div>
+            </div>
+
+            {/* Col 4: Email Newsletter Subscribe (Screenshot 2) */}
+            <div className="space-y-4">
+              <h5 className="text-[11px] uppercase tracking-[0.2em] text-white font-semibold">
+                EMAIL
+              </h5>
+              <div className="space-y-3">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="w-full bg-transparent border-b border-white/20 pb-2 text-white placeholder-white/40 text-xs focus:outline-none focus:border-white"
+                />
+                <button
+                  type="button"
+                  onClick={() => alert("Thank you for subscribing!")}
+                  className="w-full py-3 rounded-full bg-[#5d5f72] hover:bg-[#6c6e83] text-white uppercase tracking-[0.2em] text-xs font-semibold transition-all mt-2"
+                >
+                  SUBSCRIBE NOW
+                </button>
+              </div>
+
+              <div className="pt-4 border-t border-white/10">
+                <span className="text-[10px] text-white/50 block">CIN: L70101TN1992PLC022299</span>
+                <span className="text-[10px] text-white/50 block">Marketing Partner: Goed Properties & Promoters</span>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* ======================================================== */}
-      {/* 11. FOOTER WITH RERA & LEGAL COMPLIANCE */}
-      {/* ======================================================== */}
-      <footer className="bg-[#090a0d] text-[#a0a3ab] border-t border-white/10 py-12 text-xs">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 pb-10 border-b border-white/10">
-            <div className="space-y-3">
-              <span className="text-xs uppercase tracking-[0.25em] text-[#c5a880] font-semibold block">
-                ARIHANT SPACES
-              </span>
-              <h4 className="font-serif-luxury text-lg text-white">MIRA ANNA NAGAR</h4>
-              <p className="text-xs text-[#828692] leading-relaxed font-light">
-                Exclusive 4 BHK Boutique Residences (3,308 Sq.Ft) limited to 5 families in Anna Nagar East.
-              </p>
-            </div>
-
-            <div className="space-y-2">
-              <h5 className="text-white uppercase tracking-wider text-xs font-semibold">
-                Project Sections
-              </h5>
-              <ul className="space-y-1.5 text-xs text-[#828692]">
-                <li><a href="#overview" className="hover:text-[#c5a880]">Overview</a></li>
-                <li><a href="#pricing" className="hover:text-[#c5a880]">Configuration & Price</a></li>
-                <li><a href="#floorplans" className="hover:text-[#c5a880]">Floor Plans</a></li>
-                <li><a href="#amenities" className="hover:text-[#c5a880]">Curated Amenities</a></li>
-                <li><a href="#gallery" className="hover:text-[#c5a880]">Visual Gallery</a></li>
-                <li><a href="#location" className="hover:text-[#c5a880]">Location Coordinates</a></li>
-              </ul>
-            </div>
-
-            <div className="space-y-2">
-              <h5 className="text-white uppercase tracking-wider text-xs font-semibold">
-                Site Address
-              </h5>
-              <p className="text-xs text-[#828692] leading-relaxed">
-                Arihant Spaces (Mira)<br />
-                D Block, 3rd Cross Street,<br />
-                Anna Nagar East, Chennai – 600102,<br />
-                Tamil Nadu, India.
-              </p>
-            </div>
-
-            <div className="space-y-2">
-              <h5 className="text-white uppercase tracking-wider text-xs font-semibold">
-                Inquiries & Previews
-              </h5>
-              <p className="text-xs text-[#828692]">
-                Connect with our authorized advisory team:
-              </p>
-              <a href="tel:+919840012345" className="block text-white font-medium hover:text-[#c5a880]">
-                +91 98400 12345
-              </a>
-              <a href="mailto:info@goedproperties.in" className="block text-[#c5a880] hover:underline">
-                info@goedproperties.in
-              </a>
-            </div>
-          </div>
-
-          <div className="pt-6 flex flex-col sm:flex-row items-center justify-between text-[11px] text-[#6b6f7a] gap-3">
-            <span>© 2026 Arihant Spaces & Goed Properties. All rights reserved.</span>
-            <span className="text-center sm:text-right">
-              Disclaimer: Artistic impressions and specifications are indicative and subject to approvals under Tamil Nadu RERA norms.
-            </span>
+          <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] text-white/50 gap-3">
+            <span>Copyright 1985 - 2026 Arihant | All Rights Reserved - POWERED BY HYPHEN DESIGN</span>
+            <span>PRIVACY & DISCLAIMER</span>
           </div>
         </div>
       </footer>
 
       {/* ======================================================== */}
-      {/* 12. FLOATING ACTION BAR FOR MOBILE (GOED PROPERTIES STYLE) */}
+      {/* 11. MOBILE FLOATING ACTION BAR */}
       {/* ======================================================== */}
-      <div className="sm:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#0d0f12] border-t border-white/10 p-2.5 flex items-center justify-around gap-2 shadow-2xl">
+      <div className="sm:hidden fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-[#eae7e1] p-2 flex items-center justify-around gap-2 shadow-2xl">
         <a
-          href="tel:+919840012345"
-          className="flex-1 py-2.5 bg-[#14171d] border border-white/10 text-white text-xs font-semibold uppercase text-center flex items-center justify-center gap-1.5"
+          href="tel:+914442244444"
+          className="flex-1 py-2.5 rounded-full bg-[#f8f6f2] text-[#262638] text-xs font-semibold uppercase text-center flex items-center justify-center gap-1.5"
         >
-          <Phone className="w-3.5 h-3.5 text-[#c5a880]" />
+          <Phone className="w-3.5 h-3.5 text-[#c58b5c]" />
           Call
         </a>
         <a
-          href="https://wa.me/919840012345"
-          className="flex-1 py-2.5 bg-[#25D366] text-black text-xs font-semibold uppercase text-center flex items-center justify-center gap-1.5"
+          href="https://wa.me/917601000444"
+          className="flex-1 py-2.5 rounded-full bg-[#25D366] text-white text-xs font-semibold uppercase text-center flex items-center justify-center gap-1.5"
         >
           <MessageSquare className="w-3.5 h-3.5" />
           WhatsApp
         </a>
-        <button
-          onClick={() => setSiteVisitModalOpen(true)}
-          className="flex-1 py-2.5 bg-[#c5a880] text-[#0d0f12] text-xs font-semibold uppercase text-center"
+        <a
+          href="#contact"
+          className="flex-1 py-2.5 rounded-full bg-[#262638] text-white text-xs font-semibold uppercase text-center"
         >
           Enquire
-        </button>
+        </a>
       </div>
 
       {/* ======================================================== */}
-      {/* 13. MODALS (BROCHURE, PRICE BREAKUP, SITE VISIT) */}
+      {/* 12. INTERACTIVE MODALS */}
       {/* ======================================================== */}
       {brochureModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-          <div className="bg-[#14171d] border border-[#c5a880] max-w-md w-full p-6 relative">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+          <div className="bg-white rounded-2xl border border-[#eae7e1] max-w-md w-full p-6 relative shadow-2xl">
             <button
               onClick={() => setBrochureModalOpen(false)}
-              className="absolute top-4 right-4 text-white/60 hover:text-white"
+              className="absolute top-4 right-4 text-[#5e6074] hover:text-[#262638]"
             >
               <X className="w-5 h-5" />
             </button>
             <div className="text-center mb-5">
-              <Download className="w-8 h-8 text-[#c5a880] mx-auto mb-2" />
-              <h3 className="font-serif-luxury text-xl text-white">Download Brochure</h3>
-              <p className="text-xs text-[#a0a3ab]">
+              <Download className="w-8 h-8 text-[#262638] mx-auto mb-2" />
+              <h3 className="font-serif-luxury text-xl text-[#262638] font-semibold">Download Master Brochure</h3>
+              <p className="text-xs text-[#5e6074] mt-1">
                 Arihant Spaces (Mira) — 4 BHK Boutique Residences (3,308 Sq.Ft)
               </p>
             </div>
             <form
               onSubmit={(e) => {
                 e.preventDefault();
-                alert("Thank you! The brochure download has started.");
+                alert("Thank you! The brochure download has commenced.");
                 setBrochureModalOpen(false);
               }}
               className="space-y-3 text-xs"
             >
               <div>
-                <label className="block text-white/80 uppercase mb-1">Name</label>
+                <label className="block text-[#262638] uppercase mb-1 font-medium">Name</label>
                 <input
                   type="text"
                   required
                   placeholder="Your Name"
-                  className="w-full px-3 py-2 bg-[#090b0e] border border-white/10 text-white"
+                  className="w-full px-3 py-2 rounded-lg bg-[#f8f6f2] border border-[#eae7e1] text-[#262638]"
                 />
               </div>
               <div>
-                <label className="block text-white/80 uppercase mb-1">Phone Number</label>
+                <label className="block text-[#262638] uppercase mb-1 font-medium">Phone Number</label>
                 <input
                   type="tel"
                   required
                   placeholder="+91 Mobile Number"
-                  className="w-full px-3 py-2 bg-[#090b0e] border border-white/10 text-white"
+                  className="w-full px-3 py-2 rounded-lg bg-[#f8f6f2] border border-[#eae7e1] text-[#262638]"
                 />
               </div>
               <div>
-                <label className="block text-white/80 uppercase mb-1">Email</label>
+                <label className="block text-[#262638] uppercase mb-1 font-medium">Email</label>
                 <input
                   type="email"
                   required
                   placeholder="your@email.com"
-                  className="w-full px-3 py-2 bg-[#090b0e] border border-white/10 text-white"
+                  className="w-full px-3 py-2 rounded-lg bg-[#f8f6f2] border border-[#eae7e1] text-[#262638]"
                 />
               </div>
               <button
                 type="submit"
-                className="w-full py-3 bg-[#c5a880] hover:bg-[#dfc299] text-[#0d0f12] font-semibold uppercase tracking-wider text-xs mt-3"
+                className="w-full py-3 rounded-full bg-[#262638] hover:bg-[#1a1a26] text-white font-semibold uppercase tracking-wider text-xs mt-3"
               >
-                Instant Download
+                Instant Download PDF
               </button>
             </form>
           </div>
@@ -1406,113 +1262,52 @@ export default function HomeClient() {
       )}
 
       {priceBreakupModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-          <div className="bg-[#14171d] border border-[#c5a880] max-w-md w-full p-6 relative">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+          <div className="bg-white rounded-2xl border border-[#eae7e1] max-w-md w-full p-6 relative shadow-2xl">
             <button
               onClick={() => setPriceBreakupModalOpen(false)}
-              className="absolute top-4 right-4 text-white/60 hover:text-white"
+              className="absolute top-4 right-4 text-[#5e6074] hover:text-[#262638]"
             >
               <X className="w-5 h-5" />
             </button>
             <div className="text-center mb-5">
-              <FileText className="w-8 h-8 text-[#c5a880] mx-auto mb-2" />
-              <h3 className="font-serif-luxury text-xl text-white">Detailed Cost Sheet</h3>
-              <p className="text-xs text-[#a0a3ab]">
-                Get payment milestones, base price, car park charges, and government taxes breakdown.
+              <FileText className="w-8 h-8 text-[#262638] mx-auto mb-2" />
+              <h3 className="font-serif-luxury text-xl text-[#262638] font-semibold">Detailed Cost Sheet</h3>
+              <p className="text-xs text-[#5e6074] mt-1">
+                Payment schedule, base price, car park charges, and government taxes breakdown.
               </p>
             </div>
             <form
               onSubmit={(e) => {
                 e.preventDefault();
-                alert("Thank you! The price sheet has been sent to your email and phone.");
+                alert("Thank you! The cost sheet has been sent to your email and phone.");
                 setPriceBreakupModalOpen(false);
               }}
               className="space-y-3 text-xs"
             >
               <div>
-                <label className="block text-white/80 uppercase mb-1">Name</label>
+                <label className="block text-[#262638] uppercase mb-1 font-medium">Name</label>
                 <input
                   type="text"
                   required
                   placeholder="Your Name"
-                  className="w-full px-3 py-2 bg-[#090b0e] border border-white/10 text-white"
+                  className="w-full px-3 py-2 rounded-lg bg-[#f8f6f2] border border-[#eae7e1] text-[#262638]"
                 />
               </div>
               <div>
-                <label className="block text-white/80 uppercase mb-1">Phone Number</label>
+                <label className="block text-[#262638] uppercase mb-1 font-medium">Phone Number</label>
                 <input
                   type="tel"
                   required
                   placeholder="+91 Mobile Number"
-                  className="w-full px-3 py-2 bg-[#090b0e] border border-white/10 text-white"
+                  className="w-full px-3 py-2 rounded-lg bg-[#f8f6f2] border border-[#eae7e1] text-[#262638]"
                 />
               </div>
               <button
                 type="submit"
-                className="w-full py-3 bg-[#c5a880] hover:bg-[#dfc299] text-[#0d0f12] font-semibold uppercase tracking-wider text-xs mt-3"
+                className="w-full py-3 rounded-full bg-[#262638] hover:bg-[#1a1a26] text-white font-semibold uppercase tracking-wider text-xs mt-3"
               >
                 Send Detailed Cost Sheet
-              </button>
-            </form>
-          </div>
-        </div>
-      )}
-
-      {siteVisitModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-          <div className="bg-[#14171d] border border-[#c5a880] max-w-md w-full p-6 relative">
-            <button
-              onClick={() => setSiteVisitModalOpen(false)}
-              className="absolute top-4 right-4 text-white/60 hover:text-white"
-            >
-              <X className="w-5 h-5" />
-            </button>
-            <div className="text-center mb-5">
-              <Calendar className="w-8 h-8 text-[#c5a880] mx-auto mb-2" />
-              <h3 className="font-serif-luxury text-xl text-white">Book Site Visit</h3>
-              <p className="text-xs text-[#a0a3ab]">
-                Schedule an exclusive walkthrough of D Block, Anna Nagar East.
-              </p>
-            </div>
-            <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                alert("Thank you! Your private site visit request is scheduled.");
-                setSiteVisitModalOpen(false);
-              }}
-              className="space-y-3 text-xs"
-            >
-              <div>
-                <label className="block text-white/80 uppercase mb-1">Name</label>
-                <input
-                  type="text"
-                  required
-                  placeholder="Your Name"
-                  className="w-full px-3 py-2 bg-[#090b0e] border border-white/10 text-white"
-                />
-              </div>
-              <div>
-                <label className="block text-white/80 uppercase mb-1">Phone Number</label>
-                <input
-                  type="tel"
-                  required
-                  placeholder="+91 Mobile Number"
-                  className="w-full px-3 py-2 bg-[#090b0e] border border-white/10 text-white"
-                />
-              </div>
-              <div>
-                <label className="block text-white/80 uppercase mb-1">Preferred Date</label>
-                <input
-                  type="date"
-                  required
-                  className="w-full px-3 py-2 bg-[#090b0e] border border-white/10 text-white"
-                />
-              </div>
-              <button
-                type="submit"
-                className="w-full py-3 bg-[#c5a880] hover:bg-[#dfc299] text-[#0d0f12] font-semibold uppercase tracking-wider text-xs mt-3"
-              >
-                Confirm Site Visit
               </button>
             </form>
           </div>
