@@ -2,22 +2,28 @@
 
 @layer base {
   :root {
-    --font-heading: 'Playfair Display', Georgia, serif;
-    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-heading: 'DM Serif Display', 'Playfair Display', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', 'Outfit', system-ui, -apple-system, sans-serif;
     
-    /* Exact Arihant Spaces Brand Palette from live site */
-    --color-slate-dark: #262638;       /* Primary dark navy/slate for text, nav links, and pill buttons */
-    --color-slate-footer: #242533;     /* Deep midnight slate for footer */
-    --color-slate-muted: #5e6074;      /* Secondary paragraph text */
-    --color-slate-light: #9fa1b4;      /* Footer links and muted subheadings */
+    /* Regal Emerald & Champagne Platinum Palette (Brand New Color Theme) */
+    --color-emerald-deep: #0c261c;      /* Deep sovereign forest emerald for header, text & primary CTA */
+    --color-emerald-light: #163d2e;     /* Hover state & card headers */
+    --color-emerald-soft: #edf5f0;      /* Subtle tint for badges */
     
-    --color-amber-gold: #c58b5c;       /* Warm laterite and gold accent */
-    --color-amber-light: #d9a779;      /* Champagne gold highlight */
+    --color-champagne: #c49b66;         /* Refined warm champagne metallic accent */
+    --color-champagne-dark: #b0864e;    /* Deep champagne for buttons */
+    --color-champagne-soft: #fcf7ef;    /* Soft champagne canvas */
     
-    --color-bg-light: #ffffff;         /* Pure white content canvas */
-    --color-bg-sand: #f8f6f2;          /* Subtle warm sand/alabaster section background */
-    --color-bg-cream: #faf7f2;         /* Off-white warm tone */
-    --color-border-subtle: #eae7e1;    /* Minimalist luxury border line */
+    --color-surface-canvas: #ffffff;    /* Pure white */
+    --color-surface-pearl: #f6f9f7;     /* Soft luxury pearl grey-green background */
+    --color-surface-card: #ffffff;      /* Crisp card background */
+    --color-border-subtle: #e0eae3;     /* Elegant luxury border */
+    
+    --color-text-title: #0a1f16;        /* Deepest forest charcoal for headings */
+    --color-text-body: #40544b;         /* Muted forest slate for readable body paragraphs */
+    --color-text-muted: #6b8075;        /* Sub-captions and metadata */
+    
+    --color-footer-bg: #071711;         /* Deepest midnight evergreen footer */
   }
 }
 
@@ -27,16 +33,34 @@ html {
 
 body {
   background-color: #ffffff;
-  color: #262638;
+  color: #0a1f16;
   font-family: var(--font-sans);
   overflow-x: hidden;
+  font-size: 16px;
 }
 
 .font-serif-luxury {
   font-family: var(--font-heading);
 }
 
-/* Fluid Amber Silk Gradient for Hero and Feature sections (matching Arihant Mira live visual) */
+/* Custom scrollbar in Regal Emerald & Champagne */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f6f9f7;
+}
+::-webkit-scrollbar-thumb {
+  background: #0c261c;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c49b66;
+}
+
+
+
+/* Fluid Amber Silk Gradient for Hero and Feature sections */
 .bg-amber-silk {
   background: linear-gradient(135deg, #f5ebd9 0%, #e8cca6 35%, #d9a779 70%, #c58b5c 100%);
 }
@@ -45,9 +69,24 @@ body {
   background: linear-gradient(180deg, #faf6ee 0%, #f3e9db 50%, #ead7c1 100%);
 }
 
+/* Luxury Hero Dark Glassmorphism */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.glass-panel-dark {
+  background: rgba(38, 38, 56, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 7px;
+  width: 8px;
 }
 ::-webkit-scrollbar-track {
   background: #f8f6f2;
@@ -59,3 +98,4 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #c58b5c;
 }
+
